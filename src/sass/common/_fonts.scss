@@ -1,10 +1,83 @@
+@font-face{
+
+font-family: 'Georgia';
+
+src: url('fonts/WebFont.eot');
+
+src: url('fonts/Georgia.eot') format('eot'),
+
+url('fonts/Georgia.woff') format('woff'),
+
+url('fonts/Georgia.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+
+} 
+
+@font-face{
+
+font-family: 'Georgia';
+
+src: url('fonts/Georgia-Italic.eot');
+
+src: url('fonts/Georgia-Italic.eot') format('eot'),
+
+url('fonts/Georgia-Italic.woff') format('woff'),
+
+url('fonts/Georgia-Italic.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: italic;
+
+}
+
+
+@font-face{
+
+font-family: 'Georgia';
+
+src: url('fonts/Georgia-Bold.eot');
+
+src: url('fonts/Georgia-Bold.eot') format('eot'),
+
+url('fonts/Georgia-Bold.woff') format('woff'),
+
+url('fonts/Georgia-Bold.ttf') format('truetype');
+
+font-weight: bold;
+
+font-style: normal;
+
+}
+
+@font-face{
+
+font-family: 'Georgia';
+
+src: url('fonts/Georgia-BoldItalic.eot');
+
+src: url('fonts/Georgia-BoldItalic.eot') format('eot'),
+
+url('fonts/Georgia-BoldItalic.woff') format('woff'),
+
+url('fonts/Georgia-BoldItalic.ttf') format('truetype');
+
+font-weight: bold;
+
+font-style: italic;
+
+}
+
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?1byz1s');
-  src:  url('fonts/icomoon.eot?1byz1s#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?1byz1s') format('truetype'),
-    url('fonts/icomoon.woff?1byz1s') format('woff'),
-    url('fonts/icomoon.svg?1byz1s#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?cmw0os');
+  src:  url('fonts/icomoon.eot?cmw0os#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cmw0os') format('truetype'),
+    url('fonts/icomoon.woff?cmw0os') format('woff'),
+    url('fonts/icomoon.svg?cmw0os#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,24 +97,70 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram:before {
-  content: "\e906";
-}
-.icon-google:before {
+.icon-instagram2:before {
   content: "\e900";
 }
-.icon-google-simple:before {
-  content: "\e901";
+.icon-facebook:before {
+  content: "\ea90";
 }
-.icon-linkedin:before {
-  content: "\e902";
+.icon-instagram:before {
+  content: "\ea92";
 }
-.icon-linkedin-squared:before {
-  content: "\e903";
+.icon-twitter:before {
+  content: "\ea96";
 }
-.icon-facebook-squared:before {
-  content: "\e904";
+ 
+@font-face{
+
+font-family: 'ArialMT';
+
+src: url('fonts/ArialMT.eot');
+
+src: url('fonts/ArialMT.eot') format('eot'),
+
+url('fonts/ArialMT.woff') format('woff'),
+
+url('fonts/ArialMT.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+
 }
-.icon-facebook-simple:before {
-  content: "\e905";
+
+@font-face{
+
+font-family: 'TimesNewRomanPSMT';
+
+src: url('fonts/TimesNewRomanPSMT.eot');
+
+src: url('fonts/TimesNewRomanPSMT.eot') format('eot'),
+
+url('fonts/TimesNewRomanPSMT.woff') format('woff'),
+
+url('fonts/TimesNewRomanPSMT.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+
 }
+ 
+@font-face{
+
+font-family: 'TimesNewRomanPS-BoldMT';
+
+src: url('fonts/TimesNewRomanPS-BoldMT.eot');
+
+src: url('fonts/TimesNewRomanPS-BoldMT.eot') format('eot'),
+
+url('fonts/TimesNewRomanPS-BoldMT.woff') format('woff'),
+
+url('fonts/TimesNewRomanPS-BoldMT.ttf') format('truetype');
+
+font-weight: bold;
+
+font-style: normal;
+
+}
+

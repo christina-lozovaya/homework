@@ -1,0 +1,30 @@
+footer {
+ 	font-family: $timesnewroman-font-family;
+ 	font-size: $base-font-size;
+ 	padding: 30px 0 50px 0;
+ 	background-color: $footer-color; 
+ }  
+
+    
+.follow {
+	text-align: right;
+	
+	a {
+		color: $primary-text-color;
+		margin: 0 5px;
+		text-decoration: none;
+	} 
+
+	a:hover {                           /*при наведении на ссылку меняется цвет на красный*/
+	color: $navigate-link-color;
+
+    }
+
+	span { 
+		color: $black-text-color;
+		margin: 0 5px;
+	}
+	
+}
+  
+     
