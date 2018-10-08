@@ -1,16 +1,15 @@
 header {
 	 	font-family: $timesnewroman-font-family;
 	 	font-size: $base-font-size;
+	 	padding-top: 50px;
 
- 		#logo a {
+ 		#logo {
 				text-align: center;
-				display: block;
-				margin: 50px 0 20px 0;
+				margin-bottom: 20px;
 				}  
 
-		.center nav {
-				text-align: center;  
-				display: block;
+				 nav {
+				text-align: center;   /*ЗАПОМНИТЬ: nav во всех современных браузерах блочный по умолчанию, а для старых мы прописали это значение в ресете*/
 
 					a {
 						color: $primary-text-color;

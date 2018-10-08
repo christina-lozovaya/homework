@@ -332,26 +332,26 @@ th {
 header {
   font-family: "TimesNewRomanPSMT", sans-serif;
   font-size: 14px;
+  padding-top: 50px;
 }
 
-header #logo a {
+header #logo {
   text-align: center;
-  display: block;
-  margin: 50px 0 20px 0;
+  margin-bottom: 20px;
 }
 
-header .center nav {
+header nav {
   text-align: center;
-  display: block;
+  /*ЗАПОМНИТЬ: nav во всех современных браузерах блочный по умолчанию, а для старых мы прописали это значение в ресете*/
 }
 
-header .center nav a {
+header nav a {
   color: #626262;
   margin: 0 50px;
   text-decoration: none;
 }
 
-header .center nav a:hover {
+header nav a:hover {
   color: #ea1313;
 }
 
@@ -390,38 +390,34 @@ footer {
 
 .container {
   max-width: 1150px;
-  padding: 0 0px;
+  padding: 0;
   margin: 0 auto;
 }
 
 body {
   font-family: "Georgia", sans-serif;
   background-color: #ffffff;
-}
-
-main {
   color: #626262;
   font-size: 14px;
   line-height: 25px;
 }
 
-.image img {
-  width: 1150px;
+.image {
   margin: 30px 0;
+}
+
+.image img {
+  width: 100%;
+  /*ЗАПОМНИТЬ: отступы лучше дать на .image - на родителя, а ширину изображения лучше дать 100%*/
 }
 
 .textareawidth {
   width: 920px;
 }
 
-.textareawidth h1 {
-  font-family: "TimesNewRomanPSMT", sans-serif;
-}
-
 .textareawidth ul,
 .textareawidth ol {
-  -webkit-padding-start: 15px;
-  padding-inline-start: 15px;
+  padding-left: 15px;
 }
 
 .textareawidth a {
@@ -448,11 +444,14 @@ main {
   font-weight: bold;
 }
 
-.text-align {
+blockquote {
   text-align: center;
-  text-indent: 10px;
 }
 
 .arial {
   font-family: "ArialMT", sans-serif;
+}
+
+h1 {
+  font-family: "TimesNewRomanPSMT", sans-serif;
 }
