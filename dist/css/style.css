@@ -465,17 +465,62 @@ h3 {
   color: #fff;
 }
 
+.icon-img-holder {
+  width: 50px;
+}
+
 .icon-img-holder i {
   font-size: 40px;
   width: 40px;
 }
 
 .about-us {
-  margin: 110px 0;
+  margin: 40px 0;
 }
 
 .about-us p,
 .about-us .link-button,
 .about-us .icon-img-holder {
-  margin-bottom: 55px;
+  margin-bottom: 25px;
+}
+
+.visible {
+  overflow: hidden;
+}
+
+.icon-img-holder,
+.title-holder {
+  float: left;
+}
+
+.icon-img-holder .icon-img-holder,
+.title-holder .icon-img-holder {
+  width: 20%;
+}
+
+.icon-img-holder .title-holder,
+.title-holder .title-holder {
+  width: 80%;
+}
+
+.common-section {
+  position: relative;
+}
+
+.text-holder {
+  /*position: absolute;
+	top: 40px;
+    background: rgba(255,255,255, 0.5);
+    padding: 5px;*/
+  max-height: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  overflow: hidden;
+}
+
+.common-section:hover .text-holder {
+  display: block;
+  height: auto;
+  max-height: 120px;
+  margin: 0;
 }

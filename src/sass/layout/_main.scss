@@ -59,11 +59,12 @@ h3 {
 		color: $link-button-hover-color;   
 	      }
 	}
-	
 }    
 
 .icon-img-holder {
-	
+
+		width: 50px;
+
 	i {
 		font-size: 40px;
 		width: 40px;
@@ -72,10 +73,42 @@ h3 {
 
    
 .about-us {
-	margin: 110px 0;
+	margin: 40px 0;
 
 	p, .link-button, .icon-img-holder {
-		margin-bottom: 55px;
+		margin-bottom: 25px;
 	}
 }    
 
+.visible {
+	overflow: hidden;
+	}
+
+.icon-img-holder, .title-holder {
+		float: left;
+
+		.icon-img-holder {
+			width: 20%;
+		}
+
+		.title-holder {
+			width: 80%;
+		}
+}
+
+.common-section {
+	position: relative;
+}
+
+.text-holder {
+    max-height: 0;
+    transition: 0.8s;   
+    overflow: hidden;
+}
+
+.common-section:hover .text-holder {
+	display: block;
+	height: auto;
+	max-height: 120px;
+	margin: 0;
+		}
