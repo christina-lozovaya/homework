@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?baekk8");
-  src: url("fonts/icomoon.eot?baekk8#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?baekk8") format("truetype"), url("fonts/icomoon.woff?baekk8") format("woff"), url("fonts/icomoon.svg?baekk8#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?tpa8sd");
+  src: url("fonts/icomoon.eot?tpa8sd#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?tpa8sd") format("truetype"), url("fonts/icomoon.woff?tpa8sd") format("woff"), url("fonts/icomoon.svg?tpa8sd#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,16 +24,40 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-twitter:before {
-  content: "\e900";
+.icon-settings:before {
+  content: "\e902";
 }
 
-.icon-facebook:before {
+.icon-peng:before {
+  content: "\e903";
+}
+
+.icon-truck:before {
+  content: "\e904";
+}
+
+.icon-diamond:before {
   content: "\e905";
 }
 
+.icon-instagram2:before {
+  content: "\e900";
+}
+
+.icon-pencil2:before {
+  content: "\e906";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
 .icon-instagram:before {
-  content: "\e901";
+  content: "\ea92";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
 }
 
 html {
@@ -117,7 +141,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 small {
@@ -386,39 +410,12 @@ nav:hover .nav {
   transition: .3s transform;
 }
 
-.footer {
-  margin-top: 95px;
-  background-color: #f0f0f0;
-  text-align: right;
-  padding: 30px 0 50px 0;
-}
-
-.socials {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: -8px;
-}
-
-.socials li {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 8px;
-}
-
-.socials a {
-  text-decoration: none;
-}
-
-.socials-title {
-  text-transform: capitalize;
-}
-
 body {
-  font-family: Georgia;
-  font-size: 14px;
-  line-height: 1.7;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
   min-width: 320px;
-  color: #626262;
+  color: #000;
 }
 
 #wrapper {
@@ -431,4 +428,54 @@ body {
   max-width: 1280px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.title-holder {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.link-button {
+  display: inline-block;
+  border: 2px solid #ff2d2d;
+  padding: 20px 60px;
+  border-radius: 5px;
+}
+
+.link-button a {
+  text-decoration: none;
+  color: #ff2d2d;
+  font-weight: bold;
+}
+
+.link-button:hover {
+  background-color: #ff2d2d;
+}
+
+.link-button:hover a {
+  color: #fff;
+}
+
+.icon-img-holder i {
+  font-size: 40px;
+  width: 40px;
+}
+
+.about-us {
+  margin: 110px 0;
+}
+
+.about-us p,
+.about-us .link-button,
+.about-us .icon-img-holder {
+  margin-bottom: 55px;
 }

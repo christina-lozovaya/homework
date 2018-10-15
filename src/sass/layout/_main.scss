@@ -1,7 +1,7 @@
 body {
   font-family: $base-font-family;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
   min-width: 320px;
   color: $base-text-color;
 }
@@ -17,3 +17,65 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+h2 {
+	font-size: 42px;
+	line-height: 1.2;
+	
+}
+
+h3 {
+	font-size: 24px;
+}
+
+
+
+
+.title-holder {
+	text-transform: uppercase;
+	margin-bottom: 30px;   
+ } 
+
+
+.link-button {
+	display: inline-block;    
+	border: 2px solid $red;
+	padding: 20px 60px;
+	border-radius: 5px; 
+
+	
+	
+	a {
+		text-decoration: none;
+		color: $link-button-color;
+		font-weight: bold;
+			
+	}
+
+	&:hover {
+		background-color: $red; 
+
+		a {
+		color: $link-button-hover-color;   
+	      }
+	}
+	
+}    
+
+.icon-img-holder {
+	
+	i {
+		font-size: 40px;
+		width: 40px;
+	}
+}  
+
+   
+.about-us {
+	margin: 110px 0;
+
+	p, .link-button, .icon-img-holder {
+		margin-bottom: 55px;
+	}
+}    
+
