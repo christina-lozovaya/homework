@@ -1,38 +1,72 @@
+/*ДЛЯ СЕБЯ: отсутпы между смысловыми разделами
+  телефон  30px
+  планшет 40px
+  монитор (согласно макету)
+
+  между второстепенными разделами
+  телефон 20px
+  планшет 25px;
+  монитор (согласно макету)
+
+*/
+
 .header-holder {
 	position: relative;
 	background-color: $pink-gray;
 
+	p {
+	line-height: 1.75; 
+	font-size: 16px;
+	} 
+
 	.container {
 		padding: 0;
-	}
+		margin: 0 15px;  
+ 
+		@media (min-width: 768px) and (orientation: landscape) {      
+			margin-bottom: 30px;       
+		}    
 
-	@media (min-width: 1200px) {
-		padding-top: 30px;
-	}
+		@media screen  and (min-width: 1200px) {  
+			margin: 30px auto 110px;       
+			max-width: 1280px; 
+		}
+	} 
 }
+
 
 .header {
 	background: black;
 	padding: 15px;
+	margin-bottom: 30px; 
+	    
 
 	@media (min-width: 768px) and (orientation: landscape) {
 		padding: 0;
+		margin-bottom: 40px;  
 	}
-}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		width: 100%;
+		margin-bottom: 25px;    
+	}   
+
+	@media screen  and (min-width: 1200px) {
+		margin-bottom: 115px; 
+		height: 90px; 
+	}
+} 
 
 nav {
 	display: inline-block;
 	vertical-align: top;
-
 	
-
-	@media (min-width: 768px) {
+	@media (min-width: 768px)  {
 		display: block;
 		overflow: hidden;
 	}
 
 	&:hover {
-
 		.nav {
 			transform: translateX(0);
 		}
@@ -41,10 +75,10 @@ nav {
 
 .nav-opener {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: top;     
 	width: 50px;
 	height: 50px;
-	position: relative;
+	position: relative; 
 	border: 2px solid white;
 	border-radius: 4px;
 
@@ -64,7 +98,6 @@ nav {
 		content: '';
 		transition: .3s transform;
 	}
-
 
 	&:before {
 		top: 10px;
@@ -118,7 +151,7 @@ nav {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 18px;
-
+	
 	@media (min-width: 768px) {
 		position: static;
 		transform: none;
@@ -139,6 +172,8 @@ nav {
 		color: white;
 		border-bottom: 2px solid white;
 		transition: .3s background-color;
+		height: 90px; 
+		line-height: 60px;   
 
 		@media (min-width: 768px) and (orientation: landscape) {
 			border-bottom: 0;
@@ -151,6 +186,7 @@ nav {
 	}
 
 	li {
+		 
 		&:last-child {
 			a {
 				border-bottom: none;
@@ -159,7 +195,7 @@ nav {
 	}
 }
 
-
+  
 .intro {
 
 	.container {
@@ -167,3 +203,212 @@ nav {
 	}
 }
 
+
+h1 {
+	 
+	font-size: 30px;
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		font-size: 40px;
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		font-size: 40px;
+		
+	}
+
+	@media screen  and (min-width: 1200px) {
+		font-size: 60px;
+		margin-bottom: 40px;
+	}
+}    
+  
+
+.header-media {
+	   
+	   margin-bottom: 30px; 
+
+	@media (min-width: 768px) and (orientation: landscape) {
+			display: block;
+			margin: 0 25px 40px 25px;    
+	}  
+
+	@media (min-width: 768px) and (orientation: portrait) { 
+		display: block; 
+		margin: 0 25px 40px 25px;      
+	}
+
+	@media screen  and (min-width: 1200px) {
+				height: 565px;
+				overflow: hidden;
+				margin-bottom: 110px;
+				display: flex;
+				flex-direction: row;
+				align-content: space-between;
+				margin: 0;  
+				height: 465px;
+	} 
+	
+	.left {
+		
+		@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;
+			margin-bottom: 25px;  
+		} 
+
+		@media (min-width: 768px) and (orientation: portrait) {
+			width: 100%;
+			margin-bottom: 25px;   
+		} 
+
+		@media screen  and (min-width: 1200px) {
+				width: 50%; 
+		}	
+		      
+
+		.header-text-wrapper { 
+
+			.title-holder {
+					margin-bottom: 20px;
+
+					@media (min-width: 768px) and (orientation: landscape) {
+						margin-bottom: 25px;   			
+					}
+
+					@media (min-width: 768px) and (orientation: portrait) {
+						margin-bottom: 25px;   			
+					}
+			}
+				
+			@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;   			} 
+
+			@media (min-width: 768px) and (orientation: portrait) {
+			width: 100%;
+			}
+
+			@media screen  and (min-width: 1200px) { 
+				margin-bottom: 40px;
+				width: 520px;   
+			}		 
+		    
+		}  
+	}        
+
+	.text-holder {
+		 
+		text-align: justify;  
+		margin-bottom: 20px; 
+
+		@media (min-width: 768px) and (orientation: landscape) {
+			margin-bottom: 25px;   			
+		} 
+
+		@media (min-width: 768px) and (orientation: portrait) {
+			margin-bottom: 25px;   
+	    }
+
+		@media screen  and (min-width: 1200px) {
+			margin-bottom: 60px; 
+		}
+	}
+  
+	.right {
+			
+		@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;
+			margin-bottom: 25px;     
+		} 
+
+		@media (min-width: 768px) and (orientation: portrait) { 
+			width: 100%;   
+			margin: 0 auto 25px auto;   
+	    }   
+
+	    @media screen  and (min-width: 1200px) {
+			width: 50%;   
+		}
+	} 
+}  
+
+
+ .video {
+ 	position: relative;
+ 	width: 100%;  
+	height: 190px;  
+
+ 	@media (min-width: 768px) and (orientation: landscape) {
+			width: 80%;
+			height: 350px; 
+			margin: 0 auto 25px auto; 
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) { 
+			height: 250px;     
+	}
+
+	@media screen  and (min-width: 1200px) {
+			height: 388px;
+			margin: 0 0 0 auto;
+	}	  
+  
+		  
+	  
+ 	img {
+ 		position: absolute;    
+ 		width: 100%; 
+ 		z-index: 1;
+
+		@media (min-width: 320px) and (orientation: landscape) { 
+			height: 190px;     
+		}
+
+ 		@media (min-width: 768px) and (orientation: landscape) {
+			height: 300px; 
+		} 
+
+		@media (min-width: 768px) and (orientation: portrait) { 
+			max-height: 250px;      
+		}
+
+		@media screen  and (min-width: 1200px) {
+			max-height: 388px;    
+		}	 
+	}
+
+ 	a img {
+ 		position: absolute;
+ 		height: 100px;
+ 		width: auto;         
+ 		top: 26%;
+ 		left: 34%; 
+ 		z-index: 2;   
+
+ 		@media (min-width: 320px) and (orientation: landscape) { 
+			max-height: 190px;
+			top: 23%;
+			left: 40%;      
+		}  
+		
+		@media (min-width: 768px) and (orientation: landscape) {
+			max-height: 250px;
+			top: 30%;
+			left: 42%; 
+		} 
+
+		@media (min-width: 768px) and (orientation: portrait) { 
+			max-height: 250px;
+			top: 30%;
+			left: 42%;      
+		}
+
+ 		@media screen  and (min-width: 1200px) {
+			height: 125px;
+	 		top: 26%;
+	 		left: 40%; 
+	 		   
+		}
+ 	} 
+ }
