@@ -1,0 +1,32 @@
+
+
+@each $item, $background, $acolor, $border, $rounded in $buttons {
+	
+	.btn-#{$item}:hover { 
+ 
+		background-color: $background;	
+		border: $border solid $acolor;
+		color: $acolor;
+		border-radius: $rounded;
+
+	}   
+
+}       
+   
+
+.btn-list {
+	list-style-type: none;
+
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+
