@@ -7,18 +7,265 @@ body {
   }
 
  
-#wrapper {
+.video-holder {
 	position: relative;
-	width: 100%;
-	overflow: hidden;
-	margin: 0 auto;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
 }
 
-.container {
-	//max-width: 1280px;
-	margin: 0 15px;   
+
+.icon-img-holder {
+	color: $red;
+
+	@media (min-width: 768px) {
+		margin-bottom: $indent_sm;
+	}
+
+	i {
+		font-size: 20px; 
+
+		@media (min-width: 768px) {
+			font-size: 40px;
+		}
+	}
+}
+
+
+
+
+ul {
+
+	list-style: none;
 	
-	@media screen  and (min-width: 1200px) { 
+	//text-align: center;
+	text-transform: uppercase;
+	margin: 0 auto;
+
+	li {
+		display: inline;
+		//text-align: center;
+	
+	}
+}
+
+.font-size-another {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.product-list {
+
+	list-style: none;
+	text-align: center;
+	padding: 70px 0;
+
+		@media (min-width: 768px) {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		li {
+			
+			text-transform: uppercase;
+			display: block;
+
+
+
+			@media (min-width: 768px) {
+				padding: 0 20px;
+				display: inline-block;
+			}
+
+			a {
+				font-size: $font-size-nav-secondary;
+				line-height: 1.3;
+				
+				font-weight: bold;
+
+				&.active,
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+}
+
+.nav-socials {
+
+	text-align: left;
+
+	@media (min-width: 768px) {
+			margin-left: -20px;
+			margin-right: -20px;
+			margin-bottom: 40px;
+		}
+
+	li {
+		text-transform: capitalize;
+		font-style: italic;
+		//padding: 5px 25px;
+		display: block;
+
+			@media (min-width: 768px) {
+				padding: 0 20px;
+				display: inline-block;
+			}
+
+		a {
+				
+			font-size: 18px;
+			
+
+			&.active,
+			&:hover {
+				color: $red;
+			} 
+		}
+	}
+}
+
+.person {
+	img {
+		height: 250px;
+	}
+}
+
+
+
+/*.about-us {
+	margin-top: $indent_lg; 
+} */
+
+
+
+.pro-foto {
+
+	p {
+		margin-bottom: 5px;
+
+		@media (min-width: 768px) {
+			margin-bottom: 30px;
+		}
+	}
+
+
+	@media (min-width: 768px) {
+		margin: $indent_sm 0;
+	}
+
+	img {
+		border: 2px solid $pink-gray;
+		
+
+		&:hover {
+			border-color: $red;
+		}
+	}
+}
+
+.common-section {
+
+	padding: $indent_sm/2 0;
+
+	@media (min-width: 768px) {
+		padding: $indent_sm 0;
+	}
+
+	@media screen  and (min-width: 1200px) {
+		padding: $indent_lg 0;
+	}
+}
+
+.block-inverse {
+	color: $white;
+}
+
+.bg-img {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: $red;	
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.center {
+	display: flex;
+   align-items: center;
+    justify-content: center ;
+
+} 
+
+.subscribe {
+	h2 {
+		text-transform: none;
+	}
+}
+
+
+.subscribe-form * {                  // * - после класса означает, что стиль применится для всех вложенных элементов в него
+	color: $base-text-color;
+
+	[type="email"],
+	[type="submit"] {
+		appearance: none;           // снимает навешиваемые браузерами стили для форм
+	}
+}
+
+.decorated-bottom-center {
+	position: relative;
+
+	&:before {
+		@extend %decorated_line;
+		width: 30%;
+		left: 50%;
+		bottom: -10px;
+	}
+} 
+
+.decorated-bottom-left {
+	position: relative;
+
+	&:before {
+		@extend %decorated_line;
+		width: 30%;
+		left: 18%;
+		bottom: -30px;
+	}
+} 
+
+.our-team {
+	padding-top: 0; 
+}
+
+.team-intro {
+	@media (min-width: 768px) {
+		margin-bottom: 80px;
+	}
+}
+
+	
+/*	@media screen  and (min-width: 1200px) { 
 			margin-bottom: 110px;
 			max-width: 1280px; 
 			margin: 0 auto;    
@@ -317,3 +564,4 @@ h3 {
 		margin-bottom: 30px; 
 	}
  } 
+ */

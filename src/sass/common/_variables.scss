@@ -3,7 +3,7 @@ $base-font-family: 'Open Sans', sans-serif;
 $black: #000;
 $red: #ea1313;
 $white: #fff;
-$pink-gray: #f6f2f2;
+
 $gray: #626262;
 $pink-gray: #f6f2f2;
 
@@ -12,4 +12,36 @@ $link-color: $black;
 $link-hover-color: $red;
 $link-button-color: $red;
 $link-button-hover-color: $white; 
+
+$grid-gutter-width: 30px;
+$grid-count: 12;
+
+$breakpoints: (
+	sm: 768px,
+	md: 1024px,
+	lg: 1200px
+);
+
+$font-size-h1: 60px;
+$font-size-h2: 42px;
+$font-size-h3: 24px;
+$font-size-button: 18.14px;
+$font-size-nav-main: 14px;
+$font-size-nav-secondary: 22px;
+
+
+$indent_md:	60px;
+$indent_sm: 30px;
+$indent_lg: 110px;
+
+%decorated_line {
+
+	content: '';
+	position: absolute;
+	border-bottom: 2px solid $red;
+	transform: translateX(-50%);
+	
+}
+
+
       

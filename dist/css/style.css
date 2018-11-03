@@ -62,6 +62,15 @@
   content: "\ea96";
 }
 
+.decorated-bottom-center:before,
+.decorated-bottom-left:before {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid #ea1313;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -110,6 +119,7 @@ template {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 a:active,
@@ -335,59 +345,366 @@ q:after {
 
 */
 
-.header-holder {
+#wrapper {
   position: relative;
-  background-color: #f6f2f2;
+  width: 100%;
+  overflow: hidden;
 }
 
-.header-holder p {
-  line-height: 1.75;
-  font-size: 16px;
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-.header-holder .container {
-  padding: 0;
-  margin: 0 15px;
+@media (min-width: 768px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-holder .container {
-    margin-bottom: 30px;
+.col {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+a {
+  color: #000;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .col-sm-1 {
+    width: 8.33333%;
+  }
+
+  .col-sm-2 {
+    width: 16.66667%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33333%;
+  }
+
+  .col-sm-5 {
+    width: 41.66667%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33333%;
+  }
+
+  .col-sm-8 {
+    width: 66.66667%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33333%;
+  }
+
+  .col-sm-11 {
+    width: 91.66667%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .col-md-1 {
+    width: 8.33333%;
+  }
+
+  .col-md-2 {
+    width: 16.66667%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33333%;
+  }
+
+  .col-md-5 {
+    width: 41.66667%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33333%;
+  }
+
+  .col-md-8 {
+    width: 66.66667%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33333%;
+  }
+
+  .col-md-11 {
+    width: 91.66667%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .col-lg-1 {
+    width: 8.33333%;
+  }
+
+  .col-lg-2 {
+    width: 16.66667%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33333%;
+  }
+
+  .col-lg-5 {
+    width: 41.66667%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33333%;
+  }
+
+  .col-lg-8 {
+    width: 66.66667%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33333%;
+  }
+
+  .col-lg-11 {
+    width: 91.66667%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+.vertical-offset {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 45px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-holder .container {
-    margin: 30px auto 110px;
-    max-width: 1280px;
+  h1 {
+    font-size: 60px;
   }
+}
+
+h2 {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 31.5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 42px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 20.4px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.bordered {
+  border: 2px solid #ea1313;
+}
+
+.link-button {
+  text-align: center;
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+@media (min-width: 768px) {
+  .link-button {
+    margin: 30px 0;
+  }
+}
+
+.link-button a {
+  color: #ea1313;
+  font-size: 18.14px;
+}
+
+.link-button:hover {
+  background-color: #ea1313;
+}
+
+.link-button:hover a {
+  color: #fff;
+}
+
+.header-holder {
+  position: relative;
+  background-color: #f6f2f2;
+  /*@media (min-width: 768px) and (orientation: landscape) {      
+			padding-bottom: $indent_sm;       
+		}    
+
+		@media screen  and (min-width: 1200px) {  
+			margin: 30px auto 110px;       
+			max-width: 1280px; 
+		} 
+
+		@media screen  and (min-width: 1200px) {
+		padding-bottom: $indent_lg; 
+		} */
 }
 
 .header {
   background: black;
-  padding: 15px;
-  margin-bottom: 30px;
-}
+  /*@media (min-width: 768px) and (orientation: landscape) {
+		padding: 0;
+		margin-bottom: 40px;  
+	}
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header {
-    padding: 0;
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .header {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    margin-bottom: 115px;
-    height: 90px;
-  }
+	@media (min-width: 768px) and (orientation: portrait) {
+		width: 100%;
+		margin-bottom: 25px;    
+	}   */
 }
 
 nav {
@@ -489,7 +806,7 @@ nav:hover .nav {
   padding: 0 15px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -518,13 +835,13 @@ nav:hover .nav {
 .nav a {
   display: block;
   text-decoration: none;
-  padding: 15px;
+  padding: 30px;
   color: white;
   border-bottom: 2px solid white;
   -webkit-transition: .3s background-color;
   transition: .3s background-color;
   height: 90px;
-  line-height: 60px;
+  line-height: 40px;
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
@@ -542,267 +859,248 @@ nav:hover .nav {
   border-bottom: none;
 }
 
-.intro .container {
-  padding: 0 15px;
-}
-
-h1 {
-  font-size: 30px;
-  line-height: 1.2;
-  text-transform: uppercase;
+.title-holder {
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
-  h1 {
-    font-size: 40px;
+  .title-holder {
+    margin-bottom: 30px;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-  h1 {
-    font-size: 40px;
+  .title-holder {
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 60px;
-    margin-bottom: 40px;
+.text-holder {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .text-holder {
+    margin-bottom: 30px;
   }
 }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .text-holder {
+    margin-bottom: 30px;
+  }
+}
+
+/*h1 {
+	 
+	font-size: 30px;
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		font-size: 40px;
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		font-size: 40px;
+		
+	}
+
+	@media screen  and (min-width: 1200px) {
+		font-size: 60px;
+		margin-bottom: 40px;
+	}
+}    
+  
 
 .header-media {
-  margin-bottom: 30px;
-}
+	   
+	   margin-bottom: $margin_b_sm; 
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-media {
-    display: block;
-    margin: 0 25px 40px 25px;
-  }
-}
+	@media (min-width: 768px) and (orientation: landscape) {
+			display: block;
+			margin: 0 25px 40px 25px;    
+	}  
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .header-media {
-    display: block;
-    margin: 0 25px 40px 25px;
-  }
-}
+	@media (min-width: 768px) and (orientation: portrait) { 
+		display: block; 
+		margin: 0 25px 40px 25px;      
+	}
 
-@media screen and (min-width: 1200px) {
-  .header-media {
-    height: 565px;
-    overflow: hidden;
-    margin-bottom: 110px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-line-pack: justify;
-    align-content: space-between;
-    margin: 0;
-    height: 465px;
-  }
-}
+	@media screen  and (min-width: 1200px) {
+				height: 565px;
+				overflow: hidden;
+				margin-bottom: 110px;
+				display: flex;
+				flex-direction: row;
+				align-content: space-between;
+				margin: 0;  
+				height: 465px;
+	} 
+	
+	.left {
+		
+		@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;
+			margin-bottom: 25px;  
+		} 
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-media .left {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-}
+		@media (min-width: 768px) and (orientation: portrait) {
+			width: 100%;
+			margin-bottom: 25px;   
+		} 
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .header-media .left {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-}
+		@media screen  and (min-width: 1200px) {
+				width: 50%; 
+		}	
+		      
 
-@media screen and (min-width: 1200px) {
-  .header-media .left {
-    width: 50%;
-  }
-}
+		.header-text-wrapper { 
 
-.header-media .left .header-text-wrapper .title-holder {
-  margin-bottom: 20px;
-}
+			.title-holder {
+					margin-bottom: 20px;
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-media .left .header-text-wrapper .title-holder {
-    margin-bottom: 25px;
-  }
-}
+					@media (min-width: 768px) and (orientation: landscape) {
+						margin-bottom: 25px;   			
+					}
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .header-media .left .header-text-wrapper .title-holder {
-    margin-bottom: 25px;
-  }
-}
+					@media (min-width: 768px) and (orientation: portrait) {
+						margin-bottom: 25px;   			
+					}
+			}
+				
+			@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;   			} 
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-media .left .header-text-wrapper {
-    width: 100%;
-  }
-}
+			@media (min-width: 768px) and (orientation: portrait) {
+			width: 100%;
+			}
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .header-media .left .header-text-wrapper {
-    width: 100%;
-  }
-}
+			@media screen  and (min-width: 1200px) { 
+				margin-bottom: 40px;
+				width: 520px;   
+			}		 
+		    
+		}  
+	}        
 
-@media screen and (min-width: 1200px) {
-  .header-media .left .header-text-wrapper {
-    margin-bottom: 40px;
-    width: 520px;
-  }
-}
+	.text-holder {
+		 
+		text-align: justify;  
+		margin-bottom: 20px; 
 
-.header-media .text-holder {
-  text-align: justify;
-  margin-bottom: 20px;
-}
+		@media (min-width: 768px) and (orientation: landscape) {
+			margin-bottom: 25px;   			
+		} 
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-media .text-holder {
-    margin-bottom: 25px;
-  }
-}
+		@media (min-width: 768px) and (orientation: portrait) {
+			margin-bottom: 25px;   
+	    }
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .header-media .text-holder {
-    margin-bottom: 25px;
-  }
-}
+		@media screen  and (min-width: 1200px) {
+			margin-bottom: 60px; 
+		}
+	}
+  
+	.right {
+			
+		@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;
+			margin-bottom: 25px;     
+		} 
 
-@media screen and (min-width: 1200px) {
-  .header-media .text-holder {
-    margin-bottom: 60px;
-  }
-}
+		@media (min-width: 768px) and (orientation: portrait) { 
+			width: 100%;   
+			margin: 0 auto 25px auto;   
+	    }   
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .header-media .right {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-}
+	    @media screen  and (min-width: 1200px) {
+			width: 50%;   
+		}
+	} 
+}  
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .header-media .right {
-    width: 100%;
-    margin: 0 auto 25px auto;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .header-media .right {
-    width: 50%;
-  }
-}
+ .video {
+ 	position: relative;
+ 	width: 100%;  
+	height: 190px;  
 
-.video {
-  position: relative;
-  width: 100%;
-  height: 190px;
-}
+ 	@media (min-width: 768px) and (orientation: landscape) {
+			width: 80%;
+			height: 350px; 
+			margin: 0 auto 25px auto; 
+	}
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .video {
-    width: 80%;
-    height: 350px;
-    margin: 0 auto 25px auto;
-  }
-}
+	@media (min-width: 768px) and (orientation: portrait) { 
+			height: 250px;     
+	}
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .video {
-    height: 250px;
-  }
-}
+	@media screen  and (min-width: 1200px) {
+			height: 388px;
+			margin: 0 0 0 auto;
+	}	  
+  
+		  
+	  
+ 	img {
+ 		position: absolute;    
+ 		width: 100%; 
+ 		z-index: 1;
 
-@media screen and (min-width: 1200px) {
-  .video {
-    height: 388px;
-    margin: 0 0 0 auto;
-  }
-}
+		@media (min-width: 320px) and (orientation: landscape) { 
+			height: 190px;     
+		}
 
-.video img {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
+ 		@media (min-width: 768px) and (orientation: landscape) {
+			height: 300px; 
+		} 
 
-@media (min-width: 320px) and (orientation: landscape) {
-  .video img {
-    height: 190px;
-  }
-}
+		@media (min-width: 768px) and (orientation: portrait) { 
+			max-height: 250px;      
+		}
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .video img {
-    height: 300px;
-  }
-}
+		@media screen  and (min-width: 1200px) {
+			max-height: 388px;    
+		}	 
+	}
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .video img {
-    max-height: 250px;
-  }
-}
+ 	a img {
+ 		position: absolute;
+ 		height: 100px;
+ 		width: auto;         
+ 		top: 26%;
+ 		left: 34%; 
+ 		z-index: 2;   
 
-@media screen and (min-width: 1200px) {
-  .video img {
-    max-height: 388px;
-  }
-}
+ 		@media (min-width: 320px) and (orientation: landscape) { 
+			max-height: 190px;
+			top: 23%;
+			left: 40%;      
+		}  
+		
+		@media (min-width: 768px) and (orientation: landscape) {
+			max-height: 250px;
+			top: 30%;
+			left: 42%; 
+		} 
 
-.video a img {
-  position: absolute;
-  height: 100px;
-  width: auto;
-  top: 26%;
-  left: 34%;
-  z-index: 2;
-}
+		@media (min-width: 768px) and (orientation: portrait) { 
+			max-height: 250px;
+			top: 30%;
+			left: 42%;      
+		}
 
-@media (min-width: 320px) and (orientation: landscape) {
-  .video a img {
-    max-height: 190px;
-    top: 23%;
-    left: 40%;
-  }
-}
+ 		@media screen  and (min-width: 1200px) {
+			height: 125px;
+	 		top: 26%;
+	 		left: 40%; 
+	 		   
+		}
+ 	} 
+ }
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .video a img {
-    max-height: 250px;
-    top: 30%;
-    left: 42%;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .video a img {
-    max-height: 250px;
-    top: 30%;
-    left: 42%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .video a img {
-    height: 125px;
-    top: 26%;
-    left: 40%;
-  }
-}
+ */
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -812,381 +1110,551 @@ body {
   color: #000;
 }
 
-#wrapper {
+.video-holder {
   position: relative;
+}
+
+.video-holder:before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+}
+
+.video-holder iframe {
   width: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.container {
-  margin: 0 15px;
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    margin-bottom: 110px;
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-}
-
-h2 {
-  font-size: 21px;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  h2 {
-    font-size: 28px;
-    margin-bottom: 0px;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  h2 {
-    font-size: 28px;
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h2 {
-    font-size: 42px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-}
-
-.link-button {
-  display: inline-block;
-  border: 2px solid #ea1313;
-  border-radius: 5px;
-  width: 210px;
-  height: 60px;
-  text-align: center;
-  margin-bottom: 20px;
-  width: 145px;
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .link-button {
-    margin-bottom: 25px;
-    width: 215px;
-  }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .link-button {
-    margin-bottom: 25px;
-    width: 215px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .link-button {
-    margin-bottom: 0;
-    width: 215px;
-  }
-}
-
-.link-button a {
-  text-decoration: none;
-  color: #ea1313;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 50px;
-}
-
-.link-button:hover {
-  background-color: #ea1313;
-}
-
-.link-button:hover a {
-  color: #fff;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 .icon-img-holder {
-  width: 50px;
-  margin-bottom: 35px;
+  color: #ea1313;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .icon-img-holder {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
 .icon-img-holder i {
-  font-size: 40px;
-  width: 40px;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .icon-img-holder i {
+    font-size: 40px;
+  }
+}
+
+ul {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+ul li {
+  display: inline;
+}
+
+.font-size-another {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-list {
+  list-style: none;
+  text-align: center;
+  padding: 70px 0;
+}
+
+@media (min-width: 768px) {
+  .product-list {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.product-list li {
+  text-transform: uppercase;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .product-list li {
+    padding: 0 20px;
+    display: inline-block;
+  }
+}
+
+.product-list li a {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.product-list li a.active,
+.product-list li a:hover {
   color: #ea1313;
 }
 
-.about-us {
-  margin-bottom: 30px;
+.nav-socials {
+  text-align: left;
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us {
-    max-width: 994px;
-    display: block;
-    margin: 0 25px;
+@media (min-width: 768px) {
+  .nav-socials {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 40px;
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us {
-    max-width: 738px;
-    display: block;
-    margin: 0 25px;
+.nav-socials li {
+  text-transform: capitalize;
+  font-style: italic;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .nav-socials li {
+    padding: 0 20px;
+    display: inline-block;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .about-us {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    min-width: 1280px;
-    margin: 0 0 110px 0;
-  }
+.nav-socials li a {
+  font-size: 18px;
 }
 
-.about-us .left {
-  margin-bottom: 20px;
+.nav-socials li a.active,
+.nav-socials li a:hover {
+  color: #ea1313;
 }
 
-.about-us .left .title-holder,
-.about-us .left .text-holder {
-  margin-bottom: 20px;
+.person img {
+  height: 250px;
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .left .title-holder,
-  .about-us .left .text-holder {
-    margin-bottom: 25px;
-  }
+/*.about-us {
+	margin-top: $indent_lg; 
+} */
+
+.pro-foto p {
+  margin-bottom: 5px;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .left .title-holder,
-  .about-us .left .text-holder {
-    margin-bottom: 25px;
-  }
-}
-
-@media (min-width: 320px) and (orientation: landscape) {
-  .about-us .left {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .left {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .left {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about-us .left {
-    width: 50%;
-  }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .left .main-text-wrapper {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .left .main-text-wrapper {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about-us .left .main-text-wrapper {
-    width: 520px;
-  }
-}
-
-.about-us .right .text-holder {
-  margin-bottom: 20px;
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .right .text-holder {
-    margin-bottom: 25px;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .right .text-holder {
-    margin-bottom: 25px;
-  }
-}
-
-.about-us .right .icon-img-holder,
-.about-us .right .title-holder {
-  display: inline-block;
-  height: 42px;
-  margin-bottom: 20px;
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .right .icon-img-holder,
-  .about-us .right .title-holder {
-    margin-bottom: 25px;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .right .icon-img-holder,
-  .about-us .right .title-holder {
-    margin-bottom: 25px;
-  }
-}
-
-.about-us .right .icon-img-holder {
-  width: 15%;
-}
-
-.about-us .right .title-holder {
-  width: 80%;
-  text-align: center;
-}
-
-@media (min-width: 320px) and (orientation: landscape) {
-  .about-us .right {
-    display: block;
-    width: 100%;
-  }
-
-  .about-us .right .title-holder {
-    text-align: left;
-  }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .right {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .right {
-    display: block;
-    width: 100%;
-  }
-
-  .about-us .right .title-holder {
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about-us .right {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-
-.about-us .right .flex-minbox {
-  width: 290px;
-}
-
-@media (min-width: 320px) and (orientation: landscape) {
-  .about-us .right .flex-minbox {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .right .flex-minbox {
-    width: 50%;
-    padding-right: -25px;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .right .flex-minbox {
-    width: 100%;
-  }
-}
-
-.about-us .right .flex-minbox:nth-child(2n+1) {
-  margin-right: 30px;
-}
-
-@media (min-width: 768px) and (orientation: landscape) {
-  .about-us .right .flex-minbox:nth-child(2n+1) {
-    padding-right: 25px;
-    margin: 0;
-  }
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .about-us .right .flex-minbox:nth-child(2n+1) {
-    margin: 0;
-  }
-}
-
-.text-holder {
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .text-holder {
-    margin-bottom: 25px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .text-holder {
-    margin-bottom: 60px;
-  }
-}
-
-.title-holder {
-  margin-bottom: 15px;
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .title-holder {
-    margin-bottom: 25px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .title-holder {
+@media (min-width: 768px) {
+  .pro-foto p {
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: 768px) {
+  .pro-foto {
+    margin: 30px 0;
+  }
+}
+
+.pro-foto img {
+  border: 2px solid #f6f2f2;
+}
+
+.pro-foto img:hover {
+  border-color: #ea1313;
+}
+
+.common-section {
+  padding: 15px 0;
+}
+
+@media (min-width: 768px) {
+  .common-section {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .common-section {
+    padding: 110px 0;
+  }
+}
+
+.block-inverse {
+  color: #fff;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #ea1313;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.subscribe h2 {
+  text-transform: none;
+}
+
+.subscribe-form * {
+  color: #000;
+}
+
+.subscribe-form * [type="email"],
+.subscribe-form * [type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.decorated-bottom-center {
+  position: relative;
+}
+
+.decorated-bottom-center:before {
+  width: 30%;
+  left: 50%;
+  bottom: -10px;
+}
+
+.decorated-bottom-left {
+  position: relative;
+}
+
+.decorated-bottom-left:before {
+  width: 30%;
+  left: 18%;
+  bottom: -30px;
+}
+
+.our-team {
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .team-intro {
+    margin-bottom: 80px;
+  }
+}
+
+/*	@media screen  and (min-width: 1200px) { 
+			margin-bottom: 110px;
+			max-width: 1280px; 
+			margin: 0 auto;    
+	}  
+}     
+
+
+h2 {
+	font-size: 21px;
+	line-height: 1.3;
+	text-transform: uppercase;
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		font-size: 28px;
+		margin-bottom: 0px;
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		font-size: 28px;
+		margin-bottom: 0px;
+	}
+
+	@media screen  and (min-width: 1200px) {
+		font-size: 42px;
+	}
+
+}
+
+
+h3 {
+	font-size: 24px;
+}   
+
+.link-button {
+	display: inline-block;    
+	border: 2px solid $red;
+	border-radius: 5px;
+	width: 210px;
+	height: 60px;        
+	text-align: center;
+	margin-bottom: 20px; 
+	width: 145px;
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		margin-bottom: 25px;
+		width: 215px;     
+	}
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		margin-bottom: 25px;
+		width: 215px;     
+	}
+
+	@media screen  and (min-width: 1200px) { 
+		margin-bottom: 0;
+		width: 215px;   
+	}  
+
+	a {
+		text-decoration: none;
+		color: $link-button-color;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 50px;       
+	}
+
+	&:hover {
+		background-color: $red; 
+
+		a {
+		color: $link-button-hover-color;   
+	      }
+	} 
+}
+
+
+.icon-img-holder {
+
+		width: 50px;
+		margin-bottom: 35px;
+
+		@media (min-width: 768px) and (orientation: portrait) {
+			margin-bottom: 25px;      
+		} 
+
+	i {
+		font-size: 40px;
+		width: 40px;
+		color: $red;  
+	}
+}
+
+ 
+  
+
+.about-us {
+
+	margin-bottom: 30px; 
+	
+	@media (min-width: 768px) and (orientation: landscape) {
+			max-width: 994px;
+			display: block;    
+			margin: 0 25px;     
+ 
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		max-width: 738px; 
+		display: block;
+		margin: 0 25px;    
+	}
+
+	@media screen  and (min-width: 1200px) {  
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;  
+		min-width: 1280px;
+		margin: 0 0 110px 0;
+	}  
+
+	.left {    
+
+		margin-bottom: 20px; 
+
+		.title-holder, .text-holder {
+			margin-bottom: 20px;  
+			
+			@media (min-width: 768px) and (orientation: landscape) {
+				margin-bottom: 25px; 
+			}
+
+			@media (min-width: 768px) and (orientation: portrait) {
+				margin-bottom: 25px; 
+			}
+		}
+		
+		@media (min-width: 320px) and (orientation: landscape) {
+			width: 100%; 
+		}
+
+		@media (min-width: 768px) and (orientation: landscape) {
+			width: 100%;
+  
+		} 
+
+		@media (min-width: 768px) and (orientation: portrait) {
+			width: 100%;  
+		}   
+
+		@media screen  and (min-width: 1200px) {
+				width: 50%; 
+		}
+
+		.main-text-wrapper {    
+			
+			@media (min-width: 768px) and (orientation: landscape) {
+				width: 100%;   			
+			}
+
+			@media (min-width: 768px) and (orientation: portrait) {
+				width: 100%;    
+			}
+
+			@media screen  and (min-width: 1200px) {
+				width: 520px;  
+			}	
+		} 
+	} 
+    
+    .right {
+
+    	.text-holder {
+			margin-bottom: 20px;
+
+			@media (min-width: 768px) and (orientation: landscape) {
+				margin-bottom: 25px; 
+			}
+
+			@media (min-width: 768px) and (orientation: portrait) {
+				margin-bottom: 25px; 
+			}  
+    	}
+		  
+		.icon-img-holder, .title-holder {
+		  	display: inline-block; 
+		  	height: 42px;
+		  	margin-bottom: 20px;
+
+			@media (min-width: 768px) and (orientation: landscape) {
+				margin-bottom: 25px; 
+			}
+
+			@media (min-width: 768px) and (orientation: portrait) {
+				margin-bottom: 25px; 
+			}   
+
+		  }  
+
+		.icon-img-holder {
+			width: 15%;
+		}
+
+		.title-holder {
+			width: 80%;
+			text-align: center; 
+		}
+
+		@media (min-width: 320px) and (orientation: landscape) {
+			display: block;
+			width: 100%;  
+
+			.title-holder {
+				text-align: left;   
+		    }
+		}
+
+		@media (min-width: 768px) and (orientation: landscape) {
+				width: 100%;
+				display: flex;   
+				flex-wrap: wrap; 
+		}
+
+		@media (min-width: 768px) and (orientation: portrait) {
+			display: block;
+			width: 100%; 
+
+			.title-holder {
+				text-align: left;   
+		    }
+		}
+
+		@media screen  and (min-width: 1200px) {
+			width: 50%;
+			display: flex;  
+			flex-wrap: wrap; 
+		}
+		       
+		.flex-minbox {  
+			   
+			width: 290px;
+
+			@media (min-width: 320px) and (orientation: landscape) {
+				width: 100%;  
+		    }
+
+			@media (min-width: 768px) and (orientation: landscape) {
+				width: 50%;
+				padding-right: -25px;
+			}  
+
+			@media (min-width: 768px) and (orientation: portrait) {
+				width: 100%;
+				           
+			} 	
+
+			&:nth-child(2n+1) { 
+				margin-right: 30px;
+
+				@media (min-width: 768px) and (orientation: landscape) {
+					padding-right: 25px;
+					margin: 0;
+				} 	
+
+				@media (min-width: 768px) and (orientation: portrait) { 
+					margin: 0;       
+				} 	
+			}          
+   		}
+	}
+ }
+
+
+.text-holder {
+	margin-bottom: 15px;
+	text-align: justify;  
+	
+	@media (min-width: 768px) and (orientation: portrait) {
+		margin-bottom: 25px;     
+	} 
+
+	@media screen  and (min-width: 1200px) {
+		margin-bottom: 60px; 
+	}
+
+ }
+
+
+ .title-holder { 
+ 	margin-bottom: 15px;
+
+ 	@media (min-width: 768px) and (orientation: portrait) {
+		margin-bottom: 25px;      
+	}
+
+	@media screen  and (min-width: 1200px) {
+		margin-bottom: 30px; 
+	}
+ } 
+ */

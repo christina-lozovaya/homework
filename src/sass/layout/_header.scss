@@ -9,39 +9,184 @@
   монитор (согласно макету)
 
 */
+#wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	
+}
+
+.container {
+	max-width: 1280px;
+	padding: 0 #{$grid-gutter-width / 2};
+	margin: 0 auto;   
+}
+
+
+.row {
+
+	@media (min-width: 768px) {
+	  display: flex;
+	  flex-wrap: wrap;
+	  margin: 0 -#{$grid-gutter-width / 2};
+	}
+}
+
+.col {
+  padding: 0 #{$grid-gutter-width / 2};
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+a {
+	color: $base-text-color;
+
+}
+
+@for $i from 1 through $grid-count {
+	.col-#{$i} {
+		width: 100% / $grid-count * $i;
+	}
+}
+
+
+@each $item, $breakpoint in $breakpoints {
+	@media all and (min-width: $breakpoint) {
+		@for $i from 1 through $grid-count {
+			.col-#{$item}-#{$i} {
+				width: 100% / $grid-count * $i;
+			}
+		}
+	}
+}
+
+.vertical-offset {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+h1 {
+	font-size: $font-size-h1 * 0.5;
+	text-transform: uppercase;
+	line-height: 1.2;
+	
+	@media (min-width: 768px) {
+		font-size: $font-size-h1 * 0.75;
+	}
+
+	@media screen  and (min-width: 1200px) {
+		font-size: $font-size-h1;
+	}
+
+}
+
+h2 {
+	font-size: $font-size-h2 * 0.5;
+	text-transform: uppercase;
+
+	@media (min-width: 768px) {
+		font-size: $font-size-h2 * 0.75;
+	}
+
+	@media screen  and (min-width: 1200px) {
+		font-size: $font-size-h2;
+	}
+}
+
+h3 {
+	font-size: $font-size-h3 * 0.75;
+
+	@media (min-width: 768px) {
+		font-size: $font-size-h3 * 0.85;
+	}
+
+	@media screen  and (min-width: 1200px) {
+		font-size: $font-size-h3;
+	}
+
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.border-radius {
+	border-radius: 5px;
+}
+
+.bordered {
+	border: 2px solid $red;
+}
+
+
+.link-button {
+	//display: inline-block;    
+	//border: 2px solid $red;
+	//border-radius: 5px;
+	 text-align: center;      
+	//text-align: center;
+	padding: 10px 15px;
+	//padding: 10px 15px;
+	margin: 15px 0;
+	
+
+	@media (min-width: 768px) {
+		margin: 30px 0; 
+	}
+
+	a {
+		color: $link-button-color;
+		font-size: $font-size-button;
+	}
+
+	&:hover {
+		background-color: $red;
+
+		a { 
+		color: $link-button-hover-color;   
+		}
+	} 
+
+	
+} 
+
+
+
 
 .header-holder {
 	position: relative;
 	background-color: $pink-gray;
 
-	p {
-	line-height: 1.75; 
-	font-size: 16px;
-	} 
-
-	.container {
-		padding: 0;
-		margin: 0 15px;  
- 
-		@media (min-width: 768px) and (orientation: landscape) {      
-			margin-bottom: 30px;       
+	
+		/*@media (min-width: 768px) and (orientation: landscape) {      
+			padding-bottom: $indent_sm;       
 		}    
 
 		@media screen  and (min-width: 1200px) {  
 			margin: 30px auto 110px;       
 			max-width: 1280px; 
-		}
-	} 
-}
+		} 
+
+		@media screen  and (min-width: 1200px) {
+		padding-bottom: $indent_lg; 
+		} */
+	}  
+
 
 
 .header {
 	background: black;
-	padding: 15px;
-	margin-bottom: 30px; 
+	//padding: 0;
+	
 	    
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	/*@media (min-width: 768px) and (orientation: landscape) {
 		padding: 0;
 		margin-bottom: 40px;  
 	}
@@ -49,12 +194,9 @@
 	@media (min-width: 768px) and (orientation: portrait) {
 		width: 100%;
 		margin-bottom: 25px;    
-	}   
+	}   */
 
-	@media screen  and (min-width: 1200px) {
-		margin-bottom: 115px; 
-		height: 90px; 
-	}
+	
 } 
 
 nav {
@@ -150,7 +292,7 @@ nav {
 	padding: 0 15px;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: $font-size-nav-main;
 	
 	@media (min-width: 768px) {
 		position: static;
@@ -168,12 +310,12 @@ nav {
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 15px;
+		padding: 30px;
 		color: white;
 		border-bottom: 2px solid white;
 		transition: .3s background-color;
 		height: 90px; 
-		line-height: 60px;   
+		line-height: 40px;   
 
 		@media (min-width: 768px) and (orientation: landscape) {
 			border-bottom: 0;
@@ -195,16 +337,36 @@ nav {
 	}
 }
 
-  
-.intro {
+ 
+.title-holder {
 
-	.container {
-		padding: 0 15px;
+	margin-bottom: $indent_sm / 2;
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		margin-bottom: $indent_sm;   			
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		margin-bottom: $indent_sm;   			
+	}
+}
+
+.text-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		margin-bottom: $indent_sm;   			
+	}
+
+	@media (min-width: 768px) and (orientation: portrait) {
+		margin-bottom: $indent_sm;   			
 	}
 }
 
 
-h1 {
+
+/*h1 {
 	 
 	font-size: 30px;
 	line-height: 1.2;
@@ -228,7 +390,7 @@ h1 {
 
 .header-media {
 	   
-	   margin-bottom: 30px; 
+	   margin-bottom: $margin_b_sm; 
 
 	@media (min-width: 768px) and (orientation: landscape) {
 			display: block;
@@ -412,3 +574,5 @@ h1 {
 		}
  	} 
  }
+
+ */
