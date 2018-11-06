@@ -43,21 +43,14 @@ body {
 	}
 }
 
-
-
-
 ul {
 
 	list-style: none;
-	
-	//text-align: center;
 	text-transform: uppercase;
 	margin: 0 auto;
 
 	li {
 		display: inline;
-		//text-align: center;
-	
 	}
 }
 
@@ -71,19 +64,17 @@ ul {
 
 	list-style: none;
 	text-align: center;
-	padding: 70px 0;
-
+	
 		@media (min-width: 768px) {
 			margin-left: -20px;
 			margin-right: -20px;
+			padding: 70px 0;
 		}
 
 		li {
 			
 			text-transform: uppercase;
 			display: block;
-
-
 
 			@media (min-width: 768px) {
 				padding: 0 20px;
@@ -117,7 +108,6 @@ ul {
 	li {
 		text-transform: capitalize;
 		font-style: italic;
-		//padding: 5px 25px;
 		display: block;
 
 			@media (min-width: 768px) {
@@ -126,9 +116,7 @@ ul {
 			}
 
 		a {
-				
 			font-size: 18px;
-			
 
 			&.active,
 			&:hover {
@@ -139,40 +127,35 @@ ul {
 }
 
 .person {
-	img {
-		height: 250px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.person-main img {
+	height: 200px;
+	
+
+	@media (min-width: 768px) {
+		height: 450px;
 	}
 }
 
 
-
-/*.about-us {
-	margin-top: $indent_lg; 
-} */
-
-
-
 .pro-foto {
-
 	p {
-		margin-bottom: 5px;
+		margin-bottom: 0;
 
-		@media (min-width: 768px) {
-			margin-bottom: 30px;
-		}
-	}
+		img {
+			border: 2px solid $pink-gray;
+			height: 200px;
 
-
-	@media (min-width: 768px) {
-		margin: $indent_sm 0;
-	}
-
-	img {
-		border: 2px solid $pink-gray;
-		
-
-		&:hover {
-			border-color: $red;
+			@media (min-width: 768px) {
+				height: 250px;
+			}
+			
+			&:hover {
+				border-color: $red;
+			}
 		}
 	}
 }
@@ -214,14 +197,13 @@ ul {
    align-items: center;
     justify-content: center ;
 
-} 
+}
 
 .subscribe {
 	h2 {
 		text-transform: none;
 	}
 }
-
 
 .subscribe-form * {                  // * - после класса означает, что стиль применится для всех вложенных элементов в него
 	color: $base-text-color;
@@ -239,7 +221,11 @@ ul {
 		@extend %decorated_line;
 		width: 30%;
 		left: 50%;
-		bottom: -10px;
+		bottom: 5px;
+
+		@media (min-width: 768px) {
+			bottom: -10px;			
+		}
 	}
 } 
 
@@ -248,14 +234,19 @@ ul {
 
 	&:before {
 		@extend %decorated_line;
-		width: 30%;
-		left: 18%;
-		bottom: -30px;
+		width: 130px;
+		left: 12%;
+		bottom: -5px;
+
+		@media (min-width: 768px) {
+			bottom: -35px;		
+		}
 	}
 } 
 
 .our-team {
 	padding-top: 0; 
+
 }
 
 .team-intro {
@@ -264,304 +255,52 @@ ul {
 	}
 }
 
-	
-/*	@media screen  and (min-width: 1200px) { 
-			margin-bottom: 110px;
-			max-width: 1280px; 
-			margin: 0 auto;    
-	}  
-}     
+.box-shadow {
+	-webkit-box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29); 
+	box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29);
+}
 
+.flex-rw {
+  display: flex;
+  flex-flow: wrap;
+}
 
-h2 {
-	font-size: 21px;
-	line-height: 1.3;
-	text-transform: uppercase;
-
-	@media (min-width: 768px) and (orientation: landscape) {
-		font-size: 28px;
-		margin-bottom: 0px;
-	}
-
-	@media (min-width: 768px) and (orientation: portrait) {
-		font-size: 28px;
-		margin-bottom: 0px;
-	}
-
-	@media screen  and (min-width: 1200px) {
-		font-size: 42px;
-	}
-
+.copyright {
+	display: flex;
 }
 
 
-h3 {
-	font-size: 24px;
-}   
+.contact-info { 
+  
+  background-color: $dark-gray;
+  padding: 20px; 
+  margin-top: 15px;
 
-.link-button {
-	display: inline-block;    
-	border: 2px solid $red;
-	border-radius: 5px;
-	width: 210px;
-	height: 60px;        
-	text-align: center;
-	margin-bottom: 20px; 
-	width: 145px;
+  	@media (min-width: 768px) {
+		padding-left: 80px;
+  		padding-top: 145px;   			
+  	}
 
-	@media (min-width: 768px) and (orientation: portrait) {
-		margin-bottom: 25px;
-		width: 215px;     
-	}
-
-	@media (min-width: 768px) and (orientation: landscape) {
-		margin-bottom: 25px;
-		width: 215px;     
-	}
-
-	@media screen  and (min-width: 1200px) { 
-		margin-bottom: 0;
-		width: 215px;   
-	}  
-
-	a {
-		text-decoration: none;
-		color: $link-button-color;
-		font-weight: bold;
+	& > :first-child {
 		font-size: 18px;
-		line-height: 50px;       
-	}
-
-	&:hover {
-		background-color: $red; 
-
-		a {
-		color: $link-button-hover-color;   
-	      }
-	} 
-}
-
-
-.icon-img-holder {
-
-		width: 50px;
-		margin-bottom: 35px;
-
-		@media (min-width: 768px) and (orientation: portrait) {
-			margin-bottom: 25px;      
-		} 
-
-	i {
-		font-size: 40px;
-		width: 40px;
-		color: $red;  
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 }
 
- 
-  
+.form-holder {
+	padding-right: 75px;
 
-.about-us {
-
-	margin-bottom: 30px; 
-	
-	@media (min-width: 768px) and (orientation: landscape) {
-			max-width: 994px;
-			display: block;    
-			margin: 0 25px;     
- 
+	.decorated-bottom-left:before {
+		left: 9%;
+		bottom: 10px;
 	}
 
-	@media (min-width: 768px) and (orientation: portrait) {
-		max-width: 738px; 
-		display: block;
-		margin: 0 25px;    
+	form {
+
+		@media (min-width: 768px) {
+			padding-top: 100px;   			
+		}
 	}
+}
 
-	@media screen  and (min-width: 1200px) {  
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;  
-		min-width: 1280px;
-		margin: 0 0 110px 0;
-	}  
-
-	.left {    
-
-		margin-bottom: 20px; 
-
-		.title-holder, .text-holder {
-			margin-bottom: 20px;  
-			
-			@media (min-width: 768px) and (orientation: landscape) {
-				margin-bottom: 25px; 
-			}
-
-			@media (min-width: 768px) and (orientation: portrait) {
-				margin-bottom: 25px; 
-			}
-		}
-		
-		@media (min-width: 320px) and (orientation: landscape) {
-			width: 100%; 
-		}
-
-		@media (min-width: 768px) and (orientation: landscape) {
-			width: 100%;
-  
-		} 
-
-		@media (min-width: 768px) and (orientation: portrait) {
-			width: 100%;  
-		}   
-
-		@media screen  and (min-width: 1200px) {
-				width: 50%; 
-		}
-
-		.main-text-wrapper {    
-			
-			@media (min-width: 768px) and (orientation: landscape) {
-				width: 100%;   			
-			}
-
-			@media (min-width: 768px) and (orientation: portrait) {
-				width: 100%;    
-			}
-
-			@media screen  and (min-width: 1200px) {
-				width: 520px;  
-			}	
-		} 
-	} 
-    
-    .right {
-
-    	.text-holder {
-			margin-bottom: 20px;
-
-			@media (min-width: 768px) and (orientation: landscape) {
-				margin-bottom: 25px; 
-			}
-
-			@media (min-width: 768px) and (orientation: portrait) {
-				margin-bottom: 25px; 
-			}  
-    	}
-		  
-		.icon-img-holder, .title-holder {
-		  	display: inline-block; 
-		  	height: 42px;
-		  	margin-bottom: 20px;
-
-			@media (min-width: 768px) and (orientation: landscape) {
-				margin-bottom: 25px; 
-			}
-
-			@media (min-width: 768px) and (orientation: portrait) {
-				margin-bottom: 25px; 
-			}   
-
-		  }  
-
-		.icon-img-holder {
-			width: 15%;
-		}
-
-		.title-holder {
-			width: 80%;
-			text-align: center; 
-		}
-
-		@media (min-width: 320px) and (orientation: landscape) {
-			display: block;
-			width: 100%;  
-
-			.title-holder {
-				text-align: left;   
-		    }
-		}
-
-		@media (min-width: 768px) and (orientation: landscape) {
-				width: 100%;
-				display: flex;   
-				flex-wrap: wrap; 
-		}
-
-		@media (min-width: 768px) and (orientation: portrait) {
-			display: block;
-			width: 100%; 
-
-			.title-holder {
-				text-align: left;   
-		    }
-		}
-
-		@media screen  and (min-width: 1200px) {
-			width: 50%;
-			display: flex;  
-			flex-wrap: wrap; 
-		}
-		       
-		.flex-minbox {  
-			   
-			width: 290px;
-
-			@media (min-width: 320px) and (orientation: landscape) {
-				width: 100%;  
-		    }
-
-			@media (min-width: 768px) and (orientation: landscape) {
-				width: 50%;
-				padding-right: -25px;
-			}  
-
-			@media (min-width: 768px) and (orientation: portrait) {
-				width: 100%;
-				           
-			} 	
-
-			&:nth-child(2n+1) { 
-				margin-right: 30px;
-
-				@media (min-width: 768px) and (orientation: landscape) {
-					padding-right: 25px;
-					margin: 0;
-				} 	
-
-				@media (min-width: 768px) and (orientation: portrait) { 
-					margin: 0;       
-				} 	
-			}          
-   		}
-	}
- }
-
-
-.text-holder {
-	margin-bottom: 15px;
-	text-align: justify;  
-	
-	@media (min-width: 768px) and (orientation: portrait) {
-		margin-bottom: 25px;     
-	} 
-
-	@media screen  and (min-width: 1200px) {
-		margin-bottom: 60px; 
-	}
-
- }
-
-
- .title-holder { 
- 	margin-bottom: 15px;
-
- 	@media (min-width: 768px) and (orientation: portrait) {
-		margin-bottom: 25px;      
-	}
-
-	@media screen  and (min-width: 1200px) {
-		margin-bottom: 30px; 
-	}
- } 
- */
