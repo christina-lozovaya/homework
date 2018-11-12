@@ -28,7 +28,7 @@
 	@media (min-width: 768px) {
 	  display: flex;
 	  flex-wrap: wrap;
-	  margin: 0 -#{$grid-gutter-width / 2};
+	  //margin: 0 -#{$grid-gutter-width / 2};
 	}
 }
 
@@ -108,10 +108,35 @@ h3 {
 	font-weight: bold;
 }
 
+.btn-margin {
+
+	margin: 15px 0;
+
+	@media (min-width: 768px) {
+		margin: 30px 0; 
+	}
+}
+
 .btn {
 	display: inline-block;
 	vertical-align: top;
+	color: $button-color;
+	font-size: $font-size-button;
+	padding: 10px 15px;
+	text-align: center;
+	
+	@media screen  and (min-width: 1200px) {
+		width: 230px;
+	}
+
+	&:hover {
+		background-color: $red;
+	}
 }
+
+a.btn:hover { 
+		color: $button-hover-color;   
+	}
 
 .border-radius {
 	border-radius: 5px;
@@ -120,30 +145,6 @@ h3 {
 .bordered {
 	border: 2px solid $red;
 }
-
-
-.link-button {
-	text-align: center;      
-	padding: 10px 15px;
-	margin: 15px 0;
-	
-	@media (min-width: 768px) {
-		margin: 30px 0; 
-	}
-
-	a {
-		color: $link-button-color;
-		font-size: $font-size-button;
-	}
-
-	&:hover {
-		background-color: $red;
-
-		a { 
-		color: $link-button-hover-color;   
-		}
-	} 
-} 
 
 .header-holder {
 	position: relative;
@@ -312,11 +313,11 @@ nav {
 
 	margin-bottom: $indent_sm / 2;
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	@media (min-width: 768px) {
 		margin-bottom: $indent_sm;   			
 	}
 
-	@media (min-width: 768px) and (orientation: portrait) {
-		margin-bottom: $indent_sm;   			
+	@media screen  and (min-width: 1200px) {
+		margin-bottom: $indent_md;   			
 	}
 }

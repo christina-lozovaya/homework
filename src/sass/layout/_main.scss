@@ -16,7 +16,6 @@ body {
 		padding-top: 56.25%;
 	}
 
-
 	iframe {
 		width: 100%;
 		height: 100%;
@@ -64,6 +63,7 @@ ul {
 
 	list-style: none;
 	text-align: center;
+	padding-left: 0;
 	
 		@media (min-width: 768px) {
 			margin-left: -20px;
@@ -137,13 +137,16 @@ ul {
 
 	@media (min-width: 768px) {
 		height: 450px;
+		padding-bottom: $indent_sm/2;
 	}
 }
 
 
 .pro-foto {
-	p {
+	div {
 		margin-bottom: 0;
+		text-align: center;
+		padding-bottom: $indent_sm/2;
 
 		img {
 			border: 2px solid $pink-gray;
@@ -260,40 +263,67 @@ ul {
 	box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29);
 }
 
-.flex-rw {
-  display: flex;
-  flex-flow: wrap;
-}
+.flex-minbox:nth-child(odd) {
 
-.copyright {
-	display: flex;
-}
-
-
-.contact-info { 
-  
-  background-color: $dark-gray;
-  padding: 20px; 
-  margin-top: 15px;
-
-  	@media (min-width: 768px) {
-		padding-left: 80px;
-  		padding-top: 145px;   			
-  	}
-
-	& > :first-child {
-		font-size: 18px;
-		text-transform: uppercase;
-		font-weight: bold;
+	@media (min-width: 768px) {
+		padding-right: $indent_sm/2;
 	}
 }
 
-.form-holder {
-	padding-right: 75px;
+.flex-minbox:nth-child(even) {
 
+	@media (min-width: 768px) {
+		padding-left: $indent_sm/2;
+	}
+}
+
+.person-secondary {
+	padding-right: 20px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.contact-info-block { 
+  
+  
+  padding: 20px; 
+  margin-bottom: 15px;
+  background-color: $dark-gray;
+  
+
+	@media (min-width: 768px) {
+		bottom: 4%;
+		margin-top: 0px;   			
+  	}
+
+  	@media screen  and (min-width: 1200px) {
+		
+  		//left: 60%;
+  		margin-left: $indent_md;
+  		margin: 0 -9999px 0 0;
+  		padding: 145px 9999px 145px 75px;
+
+  		p {
+		margin-bottom: 30px;
+		}  			
+  	}
+	
+}
+
+
+.form-block {
+	
 	.decorated-bottom-left:before {
+
 		left: 9%;
-		bottom: 10px;
+		bottom: 9px; 
+		
+		@media (min-width: 768px) {
+			left: 9%;
+			bottom: -26px;   			
+  		}
 	}
 
 	form {
@@ -304,3 +334,26 @@ ul {
 	}
 }
 
+.form-holder {
+	margin-bottom: 15px;
+
+	@media screen  and (min-width: 1200px) {
+		margin-bottom: 0;   			
+	}
+}
+
+.text-another {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.contacts {
+	
+	padding-top: $indent_sm;
+	
+	@media screen  and (min-width: 1200px) {
+		padding-top: $indent_lg;
+	}
+	
+}
