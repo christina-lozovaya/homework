@@ -8,6 +8,7 @@ $gray: #626262;
 $pink-gray: #f6f2f2;
 $dark-gray: #2d2d2d;
 $soft-dark-gray: #313030;
+$light-gray: #e5e5e5;
 
 
 $base-text-color: $black;
@@ -38,12 +39,15 @@ $indent_sm: 30px;
 $indent_lg: 110px;
 
 %decorated_line {
-
 	content: '';
 	position: absolute;
 	border-bottom: 2px solid $red;
 	transform: translateX(-50%);
-	
+}
+
+%inline-block_vertical-align {
+	display: inline-block;
+	vertical-align: top;
 }
 
 
