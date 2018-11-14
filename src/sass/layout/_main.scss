@@ -59,6 +59,15 @@ ul {
 	text-transform: uppercase;
 }
 
+.text-another {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.inline-block-align {
+	@extend %inline-block_vertical-align;
+}
+
 .product-list {
 
 	list-style: none;
@@ -252,6 +261,13 @@ ul {
 	}
 }
 
+.pro-foto {
+	
+	img:hover {
+		border: 2px solid $red;
+	}
+}
+
 .person-secondary {
 
 	width: 100%;
@@ -272,10 +288,8 @@ ul {
 		    p {
 				position: absolute;
 				width: 100%;
-				background-color: rgba($dark-gray, 0.4);
+				background-color: rgba($dark-gray, 0.7);
 				bottom: 0;
-
-
 				margin-bottom: 0;
 				visibility: hidden;
 			}
@@ -354,10 +368,7 @@ ul {
 	}
 }
 
-.text-another {
-	font-size: 18px;
-	text-transform: uppercase;
-}
+
 
 .contacts {
 	
@@ -368,8 +379,10 @@ ul {
 	}
 }
 
-.inline-block-align {
-	@extend %inline-block_vertical-align;
+
+
+.form-background {
+	background-color: $light-gray;
 }
 
 .subscribe-form {
@@ -379,7 +392,6 @@ ul {
 		height: 80px;
 		width: 100%;
 		padding:0 35px;
-		//color: $base-font-family;
 		box-shadow: 0 0 5px rgba($black, .35);
 	}
 
@@ -393,6 +405,12 @@ ul {
 		&:hover {
 			color: $white;
 		}
+
+		&:focus {
+		    outline: none;   //убираю дефолтный браузерный стиль после нажатия кнопки
+		}
+
+
 	}
 }
 
@@ -472,6 +490,5 @@ ul {
 	}
 }
 
-.form-background {
-	background-color: $light-gray;
-}
+
+

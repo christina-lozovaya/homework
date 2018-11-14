@@ -1027,6 +1027,11 @@ ul li {
   text-transform: uppercase;
 }
 
+.text-another {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
 .product-list {
   list-style: none;
   text-align: center;
@@ -1226,6 +1231,10 @@ ul li {
   }
 }
 
+.pro-foto img:hover {
+  border: 2px solid #ea1313;
+}
+
 .person-secondary {
   width: 100%;
   position: relative;
@@ -1249,7 +1258,7 @@ ul li {
 .person-secondary .person_secondary_img p {
   position: absolute;
   width: 100%;
-  background-color: rgba(45, 45, 45, 0.4);
+  background-color: rgba(45, 45, 45, 0.7);
   bottom: 0;
   margin-bottom: 0;
   visibility: hidden;
@@ -1333,11 +1342,6 @@ ul li {
   }
 }
 
-.text-another {
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
 .contacts {
   padding-top: 30px;
 }
@@ -1346,6 +1350,10 @@ ul li {
   .contacts {
     padding-top: 110px;
   }
+}
+
+.form-background {
+  background-color: #e5e5e5;
 }
 
 .subscribe-form input[type='email'] {
@@ -1368,6 +1376,10 @@ ul li {
 
 .subscribe-form button:hover {
   color: #fff;
+}
+
+.subscribe-form button:focus {
+  outline: none;
 }
 
 input[type='email'],
@@ -1446,8 +1458,4 @@ textarea {
 
 .send-info button:hover {
   color: #fff;
-}
-
-.form-background {
-  background-color: #e5e5e5;
 }
