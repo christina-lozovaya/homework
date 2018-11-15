@@ -1,0 +1,65 @@
+.subscribe {
+	
+	margin-bottom: $indent_sm;
+	padding-bottom: $indent_md;
+
+		@media (min-width: 1024px) {
+			margin-bottom: $indent_lg;
+			padding-bottom: $indent_lg;
+		}
+
+	h2 {
+		text-transform: none;
+	}
+
+	p {
+		margin-bottom: $indent_sm/2;
+
+		@media (min-width: 768px) {
+			margin-bottom: $indent_md;
+		}
+	}
+
+
+}
+
+.subscribe-form {
+
+	input[type='email'] {
+		outline: none;
+		height: 40px;
+		width: 100%;
+		padding:0 35px;
+		box-shadow: 0 0 5px rgba($black, .35);
+		margin-bottom: $indent_sm/2;
+	
+
+		@media (min-width: 768px) {
+			height: 80px;
+			margin-bottom: 0;
+		}
+	}
+
+	button {
+		height: 60px;
+		width: 100%;
+		font-size: 18px;
+		line-height: 1.9;
+		box-shadow: 0 0 5px rgba($black, .35);
+
+		@media (min-width: 1024px) {
+			height: 80px;
+		}
+	
+		&:hover {
+			color: $white;
+		}
+
+		&:focus {
+		    outline: none;   //убираю дефолтный браузерный стиль после нажатия кнопки
+		}
+
+
+	}
+}
+

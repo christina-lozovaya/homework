@@ -1,0 +1,136 @@
+.team {
+
+	padding-bottom: $indent_sm;
+
+	@media screen  and (min-width: 1200px) {
+		padding-bottom: $indent_lg;
+	}
+	
+	p.decoration-left {
+		margin-top: -15px;
+		margin-bottom: 30px;
+
+		@media (min-width: 768px) {
+			margin-top: 40px;
+			margin-bottom: 70px;
+		}
+	}
+
+	.socials-links-list {
+
+		margin: $indent_sm/2 -15px;
+		padding: 0;
+		overflow: hidden;
+		list-style: none;
+		text-transform: capitalize;
+
+		@media (min-width: 768px) {
+			margin: 50px -15px 60px;
+		}
+
+		li {
+			padding: 0 15px;
+			float: left;
+		}
+
+		a {
+			font-weight: bold;
+			color: $base-text-color; 
+			transition: .3s color;
+
+			&:hover {
+				color: $link-hover-color;
+			}
+		}
+	}
+}
+
+.img-slide-holder {
+	
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 150%;
+
+		@media (min-width: 1024px) {  
+			display: none;
+		}
+	}
+
+	/*&:before {                               // как сделать градиент на фото и убирать его при наведении
+		//z-index: 5;
+		transition: .3s opacity;
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: radial-gradient(ellipse at center, rgba(255,0,0,0.03) 0%,rgba(254,0,0,0.03) 1%,rgba(237,11,15,0.36) 35%,rgba(255,0,34,1) 100%);
+	} */
+
+	&:hover { 
+
+			&:before {
+				opacity: 0;
+			}
+		}
+
+
+
+	@media (min-width: 1024px) {  
+		min-height: 100%;
+	}
+}
+
+.team-slider-bottom { 
+	.bottom-slide {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 10px;
+
+		@media (min-width: 768px) {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: "";
+			padding-top: 100%;
+			display: block;
+		}
+
+		a {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			&:hover {
+				+ .name-holder {
+					transform: translateY(-100%); 
+				}
+			}
+		}
+
+		.name-holder {
+			position: absolute;
+			z-index: 1;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: rgba($black, 0.6); 
+			color: $white;
+			text-transform: capitalize;
+			text-align: center;
+			padding: 5px 10px;
+			transition: .3s transform;
+		}
+	} 
+}

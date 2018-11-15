@@ -1,0 +1,45 @@
+.product-list {
+
+	list-style: none;
+	text-align: center;
+	padding-left: 0;
+	
+		@media (min-width: 768px) {
+			margin-left: -20px;
+			margin-right: -20px;
+			padding: 70px 0;
+		}
+
+		li {
+			
+			text-transform: uppercase;
+			display: block;
+
+			@media (min-width: 768px) {
+				padding: 0 20px;
+				display: inline-block;
+			}
+
+			a {
+				font-size: $font-size-nav-secondary;
+				line-height: 1.3;
+				font-weight: bold;
+
+				&.active,
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+}
+
+.pro-foto {
+
+	div {
+		padding-bottom: 15px;
+	}
+	
+	img:hover {
+		border: 2px solid $red;
+	}
+}

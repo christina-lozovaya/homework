@@ -1,0 +1,30 @@
+.flex-minbox:nth-child(odd) {
+
+	@media (min-width: 768px) {
+		padding-right: $indent_sm/2;
+	}
+}
+
+.flex-minbox:nth-child(even) {
+
+	@media (min-width: 768px) {
+		padding-left: $indent_sm/2;
+	}
+}
+
+.icon-img-holder {
+	color: $red;
+	margin-bottom: $indent_sm/2;
+
+	@media (min-width: 768px) {
+		margin-bottom: $indent_sm;
+	}
+
+	i {
+		font-size: 20px; 
+
+		@media (min-width: 768px) {
+			font-size: 40px;
+		}
+	}
+}

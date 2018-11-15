@@ -1,0 +1,33 @@
+.row {
+
+	//@media (min-width: 768px) {
+	  display: flex;
+	  flex-wrap: wrap;
+	  margin: 0 -#{$grid-gutter-width / 2};
+	//}
+}
+
+.col {
+  padding: 0 #{$grid-gutter-width / 2};
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+
+@for $i from 1 through $grid-count {
+	.col-#{$i} {
+		width: 100% / $grid-count * $i;
+	}
+}
+
+
+@each $item, $breakpoint in $breakpoints {
+	@media all and (min-width: $breakpoint) {
+		@for $i from 1 through $grid-count {
+			.col-#{$item}-#{$i} {
+				width: 100% / $grid-count * $i;
+			}
+		}
+	}
+}
+

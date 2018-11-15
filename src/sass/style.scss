@@ -2,6 +2,13 @@
 @import "common/variables";
 @import "common/reset";
 
+@import "layout/grid-12col";
+
 @import "layout/header";
 @import "layout/footer";
-@import "layout/main";  
+@import "layout/main";
+@import "layout/about-us-section"; 
+@import "layout/our-product-section";
+@import "layout/our-team-section";
+@import "layout/subscribe-us-section";
+@import "layout/contuct-us-section";
