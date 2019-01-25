@@ -1,26 +1,37 @@
 $primary-font: "Raleway", sans-serif;
 $secondary-font: "Montserrat", sans-serif;
 
-$bg-color: #f2f2f2;
-$base-text-color: #333;
-$bg_img_color: #fff;
-$base-button-color: #000;
-$button-hover-color: #000;
+// COLORS-------
 
-
-$font-size-button: 16px;
-$font-size-nav-main: 16px;
-
-
-
-// COLORS
-
-$white: #000;
+$white: #ffffff;
+$ivory: #fbfaf8;  //цвет слоновой кости для bg-color_2
 $black: #000;
 $red: #000;
 $yellow: #000;
 $green: #000;
-$blue: #000;
+$blue: #00bff3;
+$gray: #8c8c8c;
+$dark-gray: #555555;
+$olive-brown:  #998675;
+$olive-yellow:  #c7b299;
+
+//------------
+
+$bg-color: $white;
+$base-text-color: $gray;
+$base-header-color: $dark-gray;
+$header-hover-color: $olive-yellow;
+$bg_img_color: $dark-gray;   //он же цвет для наложения на bg-img с регулировкой прозрачности
+$base-button-color: $olive-brown;
+$button-hover-color: darker($base-button-color, 5); //где 5 - количество тонов затемнения(darker) или осветления (lighter) от 1 до 17
+
+
+$font-size-button: 16px;
+$font-size-nav-main: 14px;
+
+
+
+
 
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
@@ -34,8 +45,8 @@ $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
 //INDENTS
 
 $indent_sm: 30px;
-$indent_md: 60px;
-$indent_lg: 90px;
+$indent_md: 50px;
+$indent_lg: 80px;
 
 //------------------------------------
 

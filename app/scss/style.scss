@@ -2,9 +2,6 @@
 @import "fonts";
 @import "libs";
 
-@import "layout/header";
-@import "layout/footer";
-@import "layout/main";
 
 //---------WRAPPER CONTAINER tags header body footer  INPUTS/form-elevents
 
@@ -109,6 +106,10 @@ body {
 
 //-------------------------OTHER STYLES
 
+
+
+
+
 b, strong {
 	font-weight: bold;
 }
@@ -185,78 +186,10 @@ a.btn:hover {
 	border: 2px solid $red;
 }
 
-nav {
-	display: inline-block;
-	vertical-align: top;
-	
-	@include media-breakpoint-down(sm)  {
-		display: block;
-		overflow: hidden;
-	}
 
-	&:hover {
-		.nav {
-			transform: translateX(0);
-		}
-	}
-}
-
-.nav {
-	position: absolute;
-	top: 80px;
-	left: 0;
-	right: 0;
-	background: $black;
-	transform: translateX(-100%);
-	transition: .3s transform;
-	list-style: none;
-	padding: 0 15px;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: $font-size-nav-main;
-	
-	@include media-breakpoint-down(sm) {
-		position: static;
-		transform: none;
-		max-height: 0;
-		transition: .3s max-height;
-	}
-
-	@include media-breakpoint-down(md) {
-		display: flex;
-		justify-content: center;
-		max-height: none;
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-		padding: 30px;
-		color: $white;
-		border-bottom: 2px solid $white;
-		transition: .3s $bg-color;
-		height: 90px; 
-		line-height: 40px;   
-
-		@media (min-width: 768px) and (orientation: landscape) {
-			border-bottom: 0;
-		}
-
-		&.active,
-		&:hover {
-			background: $red;
-		}
-	}
-
-	li {
-		 
-		&:last-child {
-			a {
-				border-bottom: none;
-			}
-		}
-	}
-}
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
 
 
 
