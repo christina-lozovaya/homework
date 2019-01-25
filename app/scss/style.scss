@@ -1,0 +1,263 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main";
+
+//---------WRAPPER CONTAINER tags header body footer  INPUTS/form-elevents
+
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1280px;
+	padding: 0 #{$grid-gutter-width / 2};
+	margin: 0 auto;   
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	line-height: 1.65;
+	font-family: $primary-font;
+	color: $base-text-color;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: $red;
+		}
+		&:required:valid {
+			border-color: $green;
+		}
+	}
+}
+
+// --------------------------------------HOLDERS and DECORATION
+.common-section {
+
+	padding: $indent_sm/2 0;
+
+	@include media-breakpoint-down(sm) {
+		padding: $indent_sm 0;
+	}
+	
+	@include media-breakpoint-down(lg) {
+		padding: $indent_lg 0;
+	}
+}
+
+.video-holder {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+}
+
+.title-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: $indent_sm;   			
+	}
+}
+
+.text-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: $indent_sm;   			
+	}
+
+	@include media-breakpoint-down(lg) {
+		margin-bottom: $indent_md;   			
+	}
+}
+
+.decoration {
+	position: relative;
+	padding-bottom: 30px;
+
+	&:after {
+		content: "";
+		border-bottom:  3px solid $red;
+		position: absolute;
+		width: 100px;
+		transform: translateX(-50%);
+		bottom: 0;
+	}
+}
+
+//-------------------------OTHER STYLES
+
+b, strong {
+	font-weight: bold;
+}
+
+a {
+	color: $base-text-color;
+}
+
+::selection {          //Псевдоэлемент ::selection применяет стиль к выделенному пользователем тексту
+	background-color: $base-text-color;
+	color: $bg-color;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.bg-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: $bg_img_color;	
+}
+
+.box-shadow {
+	-webkit-box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29); 
+	box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29);
+}
+
+.block-inverse {
+	color: $white;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	color: $base-button-color;
+	font-size: $font-size-button;
+	padding: 10px 15px;
+	text-align: center;
+	background-color: transparent;
+	
+	@include media-breakpoint-down(lg) {
+		width: 230px;
+	}
+
+	&:hover {
+		background-color: $red;
+	}
+}
+
+a.btn:hover { 
+		color: $button-hover-color;   
+	}
+
+.border-radius {
+	border-radius: 5px;
+}
+
+.bordered {
+	border: 2px solid $red;
+}
+
+nav {
+	display: inline-block;
+	vertical-align: top;
+	
+	@include media-breakpoint-down(sm)  {
+		display: block;
+		overflow: hidden;
+	}
+
+	&:hover {
+		.nav {
+			transform: translateX(0);
+		}
+	}
+}
+
+.nav {
+	position: absolute;
+	top: 80px;
+	left: 0;
+	right: 0;
+	background: $black;
+	transform: translateX(-100%);
+	transition: .3s transform;
+	list-style: none;
+	padding: 0 15px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: $font-size-nav-main;
+	
+	@include media-breakpoint-down(sm) {
+		position: static;
+		transform: none;
+		max-height: 0;
+		transition: .3s max-height;
+	}
+
+	@include media-breakpoint-down(md) {
+		display: flex;
+		justify-content: center;
+		max-height: none;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 30px;
+		color: $white;
+		border-bottom: 2px solid $white;
+		transition: .3s $bg-color;
+		height: 90px; 
+		line-height: 40px;   
+
+		@media (min-width: 768px) and (orientation: landscape) {
+			border-bottom: 0;
+		}
+
+		&.active,
+		&:hover {
+			background: $red;
+		}
+	}
+
+	li {
+		 
+		&:last-child {
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+
+
+@import "media"; // Always at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

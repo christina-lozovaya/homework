@@ -1,0 +1,41 @@
+$primary-font: "Raleway", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+
+$bg-color: #f2f2f2;
+$base-text-color: #333;
+$bg_img_color: #fff;
+$base-button-color: #000;
+$button-hover-color: #000;
+
+
+$font-size-button: 16px;
+$font-size-nav-main: 16px;
+
+
+
+// COLORS
+
+$white: #000;
+$black: #000;
+$red: #000;
+$yellow: #000;
+$green: #000;
+$blue: #000;
+
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px; //эти переменные из BS4 можно перебить под себя
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px); //эти breakpoints лучше не трогать, они оптимальны
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+//-------------------------------------------------
+
+//INDENTS
+
+$indent_sm: 30px;
+$indent_md: 60px;
+$indent_lg: 90px;
+
+//------------------------------------
+
