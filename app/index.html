@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,42 +9,583 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 	<!-- Template Basic Images Start -->
-	<link rel="icon" href="img/favicon/favicon.ico"><!--для иконки во вкладкестраницы браузера-->
-	<!--для иконки во вкладкестраницы браузера-->
+	<link rel="icon" href="img/favicon/favicon.ico"> <!--для иконки во вкладке страницы браузера-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!--slick slider-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300i,400|Raleway:400,500,600,700,800" rel="stylesheet"> <!--fonts-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> <!--иконки font awesome-->
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300i,400" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body> <!-- Custom HTML -->
+<body> 
 
 	<div class="wrapper">
 	
 		<header id="header">
 			<div class="container">
-				<nav class="row">
-					<div class="col-3">
-						<a href="#"><img src="img/Waxom(logo).png" alt="Waxom's company" /></a>
+			
+				<div class="group">
+					<div class="logo-holder"> 
+						<a href="#">
+							<img src="img/Waxom(logo).png" alt="Waxom's company" />
+						</a>
 					</div>
-					<div class="col-9">
-						<a href="#" class="menu-trigger">Menu</a>
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Portfolio</a></li>
-							<li><a href="#">Features</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Pricing</a></li>
-							<li><a href="#">Shortcodes</a></li>
-							<li><a href="#">Contact</a></li>
+					<div class="menu-button">
+						<a href="#" class="menu-trigger">
+							<span class="span-menu">MENU</span>
+							<span class="fa fa-bars" aria-hidden="true"></span>
+						</a>
+					</div>
+					<nav class="main-navbar">
+						<ul class="nav ">
+							<li><a href="#" target="_blank">Home</a></li>
+							<li><a href="#about" target="_blank">About Us</a></li>
+							<li><a href="#portfolio" target="_blank">Portfolio</a></li>
+							<li><a href="#" target="_blank">Features</a></li>
+							<li><a href="#" target="_blank">Blog</a></li>
+							<li><a href="#" target="_blank">Pricing</a></li>
+							<li><a href="#" target="_blank">Shortcodes</a></li>
+							<li><a href="#contact" target="_blank">Contact</a></li>
+							<li><a href="#" id="shopingAction"><span class="fa fa-shopping-bag" aria-hidden="true"></span></a></li>
+							<li><a href="" id="toggleSearch"><span class="fa fa-search" aria-hidden="true"></span></a></li>
 						</ul>
-					</div>
-				</nav>
+						<div class="search">
+							<input type="text" placeholder="Search..."> 
+							<button id="startSearch" type="submit">
+							  <span class="fa fa-search"></span>
+							</button>
+							<button id="closeSearch" type="button">
+							  <span class="fa fa-close"></span>
+							</button>
+						</div>
+					</nav>					
+				</div> 
+			
 			</div>
 		</header>
 
 		<main id="main">
+ 
+			<div class="slider-block flex align-items-center">
+				<div class="darken-filter"></div>
+					<div class="container">
+					<div class="portfolio-slider fade"> 
+
+						<div class="slide-item">
+							<p class="lead"><strong>Unique and Modern Design</strong></p>
+							<h2 class="slide-header">Portfolio PSD Template</h2>
+							<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+							<button class="btn btn-main bordered border-radius" type="button">Get Started</button>
+						</div>
+					
+				  		<div class="slide-item">
+							<p class="lead"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, iste?</strong></p>
+							<h2 class="slide-header">Lorem ipsum dolor sit amet.</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam architecto vitae, ducimus sequi unde fugit neque beatae laboriosam sit voluptatum!</p>
+							<button class="btn btn-main bordered border-radius" type="button">Get Started</button>
+						</div>
+
+				  		<div class="slide-item">
+							<p class="lead"><strong>Unique and Modern Design</strong></p>
+							<h2 class="slide-header">Portfolio PSD Template</h2>
+							<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+							<button class="btn btn-main bordered border-radius" type="button">Get Started</button>
+						</div>
+
+						<div class="slide-item">
+							<p class="lead"><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, iste?</strong></p>
+							<h2 class="slide-header">Lorem ipsum dolor sit amet.</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam architecto vitae, ducimus sequi unde fugit neque beatae laboriosam sit voluptatum!</p>
+							<button class="btn btn-main bordered border-radius" type="button">Get Started</button>
+						</div>
+
+						<div class="slide-item">
+							<p class="lead"><strong>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</strong></p>
+							<h2 class="slide-header">Waxom is Realization of your Ideas.</h2>
+							<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<button class="btn btn-main bordered border-radius" type="button">Get Started</button>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
 			
+			<div id="about" class="about-us common-section" >
+				<div class="container">
+					<div class="row">
+					
+						<div class="col-12 col-md-3">
+							<div class="inform-block">
+								<a href="#">
+									<div class="icon-holder">
+										<span class="icon fa fa-pencil"></span>
+									</div>
+									<div class="title-holder">
+										<h3>Web & App Design</h3>
+									</div>
+									<div class="text-holder">
+										<p class="small-font-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+									</div>
+									<p class="decoration"></p>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-3">
+							<div class="inform-block">
+								<a href="#">
+									<div class="icon-holder">
+										<span class="icon fa fa-clipboard"></span>
+									</div>
+									<div class="title-holder">
+										<h3>Development</h3>
+									</div>
+									<div class="text-holder">
+										<p class="small-font-text">Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+									</div>
+									<p class="decoration"></p>
+								</a>
+							</div>
+						</div>
+				
+						<div class="col-12 col-md-3">
+							<div class="inform-block">
+								<a href="#">
+									<div class="icon-holder">
+										<span class="icon fa fa-cog"></span>
+									</div>
+									<div class="title-holder">
+										<h3>Customization</h3>
+									</div>
+									<div class="text-holder">
+										<p class="small-font-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+									</div>
+									<p class="decoration"></p>
+								</a>
+							</div>
+						</div>
+				
+						<div class="col-12 col-md-3">
+							<div class="inform-block">
+								<a href="#">
+									<div class="icon-holder">
+										<span class="icon fa fa-folder-open"></span>
+									</div>
+									<div class="title-holder">
+										<h3>Marketing</h3>
+									</div>
+									<div class="text-holder">
+										<p class="small-font-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+									</div>
+									<p class="decoration"></p>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<section id="join" class="join-us-block">
+				
+					<div class="container text-center">
+						<div class="title-holder">
+							<h2>Waxom is Realization of your Ideas.</h2>
+						</div>
+						<div class="text-holder">
+							<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+						</div>
+					</div>
+				
+				
+					<div class="container">
+						<div class="carousel">
+					    <a class="carousel-item" href="#one!"><img src="img/browser-left.png" alt="portfolio PSD template for web-site" /></a>
+					    <a class="carousel-item" href="#two!"><img src="img/browser-center.png" alt="portfolio PSD template for mobile" /></a>
+					    <a class="carousel-item" href="#three!"><img src="img/browser-right.png" alt="our creative portfolio" /></a>
+					    </div>
+					</div>
+				
+				
+				<footer class="bg-img" style="background-image: url(img/bg-gradient-footer.png);">
+					
+					<div class="container">
+						<div class="row text-center">
+							<div class="col col-12 col-sm-8 col-lg-9">
+								<p >
+									<span class="large-font-text">Waxom Multipurpose WordPress Theme</span><br />
+									<span class="middle-font-text">Don't Forget to Rate the Template. Thanks so much!</span>
+								</p>
+							</div>
+							<div class="col col-12 col-sm-4 col-lg-3 align-self-center">
+								<button class="btn btn-main bordered border-radius" type="button">Purchase Now</button>
+							</div>
+							
+						</div>
+					</div>
+				</footer>
+				
+			</section>
+
+
+			<section id="portfolio" class="portfolio-block common-section">
+				<div class="container text-center">
+					<div class="title-holder">
+						<h2>Our Latest Projects.</h2>
+					</div>
+					<div class="text-holder">
+						<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+					</div>
+					<div  class="row filter text-center">
+						<div class="col col-12">
+							<button class="btn btn-secondary border-radius  active" type="button" data-filter="all">All</button>
+							<button class="btn btn-secondary border-radius" type="button" data-filter="web">Web Design</button>
+							<button class="btn btn-secondary border-radius" type="button" data-filter="mobile">Mobile App</button>
+							<button class="btn btn-secondary border-radius" type="button" data-filter="illustration">Illustration</button>
+							<button class="btn btn-secondary border-radius" type="button" data-filter="photography">Photography</button>
+						</div>
+					</div>
+	
+			<!-- Portfolio Gallery Grid -->
+		
+					<div class="filter-boxes text-left">
+						<div class="row filter-row-one">
+
+							<div class="col col-12 col-sm-4 ">
+								<article class="filter-box" data-item="mobile">
+									<div class="image-card-holder">
+										<img src="img/product_1.png" class="fill" alt="our mobile product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Claritas Etiam Processus</h4>
+									    <p>Photography, Nature</p>
+									</div>
+					            </article>
+					        </div>
+
+					        <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="web">
+									<div class="image-card-holder">
+										<img src="img/product_2.png" class="fill" alt="our web product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Quam Nutamus Farum</h4>
+									    <p>Graphic Design, Mock-Up</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="illustration">
+									<div class="image-card-holder">
+										<img src="img/product_3.png" class="fill" alt="our illustration product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Usus Legentis Videntur</h4>
+									    <p>Photography, Holiday</p>
+									</div>
+					            </article>
+					        </div>
+
+					        <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="photography">
+									<div class="image-card-holder">
+										<img src="img/product_4.png" class="fill" alt="our photography product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Claritas Etiam Processus</h4>
+									    <p>Photography, Nature</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="mobile">
+									<div class="image-card-holder">
+										<img src="img/product_5.png" class="fill" alt="our mobile product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Quam Nutamus Farum</h4>
+									    <p>Graphic Design, Mock-Up</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="web">
+									<div class="image-card-holder">
+										<img src="img/product_6.png" class="fill" alt="our web product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Usus Legentis Videntur</h4>
+									    <p>Photography, Holiday</p>
+									</div>
+					            </article>
+					        </div>
+				        </div>
+
+				        <div class="row filter-row-two">
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="photography">
+									<div class="image-card-holder">
+										<img src="img/product_1.png" class="fill" alt="our photography product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Claritas Etiam Processus</h4>
+									    <p>Photography, Nature</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="illustration">
+									<div class="image-card-holder">
+										<img src="img/product_2.png" class="fill" alt="our illustration product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							             <h4>Quam Nutamus Farum</h4>
+									    <p>Graphic Design, Mock-Up</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="mobile">
+									<div class="image-card-holder">
+										<img src="img/product_3.png" class="fill" alt="our mobile product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Usus Legentis Videntur</h4>
+									    <p>Photography, Holiday</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="web">
+									<div class="image-card-holder">
+										<img src="img/product_4.png" class="fill" alt="our web product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Claritas Etiam Processus</h4>
+									    <p>Photography, Nature</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="photography">
+									<div class="image-card-holder">
+										<img src="img/product_5.png" class="fill" alt="our photography product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+ 										<h4>Quam Nutamus Farum</h4>
+									    <p>Graphic Design, Mock-Up</p>
+									</div>
+					            </article>
+					        </div>
+
+				            <div class="col col-12 col-sm-4">
+								<article class="filter-box" data-item="illustration">
+									<div class="image-card-holder">
+										<img src="img/product_6.png" class="fill" alt="our illustration product" />
+										<div class="box-links">
+											<div class="darken-filter"></div>
+											<div class="link-holder centered">
+												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
+												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="box-content">
+							            <h4>Usus Legentis Videntur</h4>
+									    <p>Photography, Holiday</p> 
+									</div>
+					            </article>
+					        </div>
+				       	 </div>
+     	
+				    </div>
+				    <button class="button btn btn-main bordered border-radius" type="button">Load more</button>
+				</div>			
+			</section>
+
+			<section class="media-block">
+				<div class="darken-filter"></div>
+				<!-- The video -->
+				<video  id="myVideo">
+				  <source src="media/Working_process.mp4" type="video/mp4">
+				</video>
+
+				<!-- Optional: some overlay text to describe the video -->
+				<div class="container centered text-center media-content">
+				<!-- Use a button to pause/play the video with JavaScript -->
+				  <button class="video-btn" loop="loop" id="myBtn" onclick="myFunction()"><img class="centered play-icon" src="img/icon-play.png" alt="icon video-play" /></button>
+				  <div class="title-holder">
+				  	<h2>Waxom Video Presentation</h2>
+				  </div>
+				  <div class="text-holder">
+				 	 <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt<br /> saepius, qui sequitur mutationem consuetudium.</p>
+				  </div>
+				  <p>03:26</p>
+				</div>
+			</section>
+
+			<section class="mobile-advantages-block">
+				<div class="container">
+					<div class="row">
+						<div class="col col-12 col-sm-5">
+							<div class="mobile-image-holder">
+								<img src="img/iPhone-in-hand.png" alt="iPhone in hand">
+							</div>
+						</div>
+						<div class="col col-12 col-sm-7">
+							<div class="title-holder">
+								<h3>Excellent for Mobile Devices.</h3>
+							</div>
+							<div class="text-holder">
+								<p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum</p>
+							</div>
+							<div class="list-holder">
+								<ul class="circle-list circle">
+									<li> Nam liber tempor cum soluta nobis eleifend option;</li>
+									<li>Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+									<li>Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+									<li>Investigationes demonstraverunt lectores</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="progress-block bg-img text-center">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="progress-item col col-6 col-sm-2">
+							<div class="icon-holder">
+								<img src="img/design-icons/icon-clients.png" alt="icon clients" />
+							</div>
+							<p class="extra-large-font-text">3587</p>
+							<p class="uppercase">Satisfied Clients</p>
+							<p class="decoration"></p>
+						</div>
+						<div class="progress-item col col-6 col-sm-2">
+							<div class="icon-holder">
+								<img src="img/design-icons/icon-coffee.png" alt="icon coffee" />
+							</div>
+							<p class="extra-large-font-text">207</p>
+							<p class="uppercase">Cups of coffee</p>
+							<p class="decoration"></p>
+						</div>
+						<div class="progress-item col col-6 col-sm-2">
+							<div class="icon-holder">
+								<img src="img/design-icons/icon-posts.png" alt="icon posts" />
+							</div>
+							<p class="extra-large-font-text">2500</p>
+							<p class="uppercase">Blog posts</p>
+							<p class="decoration"></p>
+						</div>
+						<div class="progress-item col col-6 col-sm-2">
+							<div class="icon-holder">
+								<img src="img/design-icons/icon-likes.png" alt="icon likes" />
+							</div>
+							<p class="extra-large-font-text">873</p>
+							<p class="uppercase">Likes</p>
+							<p class="decoration"></p>
+						</div>
+						<div class="progress-item col col-6 col-sm-2">
+							<div class="icon-holder">
+								<img src="img/design-icons/icon-launched.png" alt="icon launched" />
+							</div>
+							<p class="extra-large-font-text">900</p>
+							<p class="uppercase">We launched</p>
+							<p class="decoration"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
 		</main>
 
 		<footer id="footer">
@@ -56,6 +597,10 @@
 
 <!-- SCRIPTS -->
 
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  <!-- materialize для carousel -->
+	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>  <!-- slick slider -->
 	<script src="js/scripts.min.js"></script>
 
 </body>

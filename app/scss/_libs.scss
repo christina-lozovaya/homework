@@ -1,8 +1,13 @@
-@import "../libs/bootstrap/scss/bootstrap-reboot.scss";  //по сути является normalaze стилям
+//@import "../libs/bootstrap/scss/bootstrap-reboot.scss";  //по сути является normalaze стилям
 @import "../libs/bootstrap/scss/bootstrap-grid.scss";  //сетка Bootstrap4
 @import "../libs/bootstrap/scss/utilities/_sizing.scss"; // класс "w-25; w-50; w-75; w-100" - делает ширину блока Width 25%; 50%; 75%; 100% соответственно
 														//	класс "h-25; h-50; h-75; h-100" - делает высоту блока Height 25%; 50%; 75%; 100% соответственно
-														
+												
+// @import "../libs/materialize/sass/components/_variables.scss";
+// @import "../libs/materialize/sass/components/_slider.scss";
+// @import "../libs/materialize/sass/components/_carousel.scss";
+// @import "../libs/materialize/sass/components/_transitions.scss";
+
 
 
 																	

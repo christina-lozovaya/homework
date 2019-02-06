@@ -1,37 +1,236 @@
-nav {
-  width: 100%;
-  background-color: $black;
-}
-
-nav ul li {
-  display:inline-block;  
-}
-
-nav a {
-  color: $white;
-  display:block;
-  text-decoration: none;
-  padding:20px 30px;
- }
-
-nav a:hover {
-  background: $black;
-}
-
-.menu-trigger {
-  display:none;
-  color: $white;
-}
-
-@include media-breakpoint-down(sm) {
-  .menu-trigger {
-    display:block;
+header {
+ 
+  padding: $indent_xs 0;
+  background-color: $dark-gray;
+  
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    z-index: 3;
+    //max-height: 100px;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: $indent_sm;
+    background-color: transparent;
+    
   }
-  nav ul li {
-    display:block;
-    border-top: 1px $red solid;    
+}
+
+.group {
+  display: block;
+  text-align: center;
+  
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 748px;
+    justify-content: center;
+
   }
-  nav ul {
+
+  @include media-breakpoint-up(lg) {
+    //min-width: 1140px;
+  }
+
+
+  @include media-breakpoint-up(xl) {
+    justify-content: space-between;
+    min-width: 1140px;
+  }
+}
+
+.logo-holder {
+  display:inline-block;
+  width: 49%;
+
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  img {
+    width: 190px;
+    height: $indent_md;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: auto;
+    padding-bottom:  $indent_xs;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom:  0;
+  }
+}
+
+
+
+.main-navbar {
+  
+  position: relative;
+ 
+  .nav {
+    
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    &.nav-offset {
+        transform: translateY(100%);
+    }
+    
+    li {
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid $nav-link-hover-color;
+
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+        vertical-align: top;
+        border-bottom: none;
+        width: auto;
+       
+      }
+    }
+    
+    a {
+      padding: $indent_sm/3 0;
+      display: inline-block;
+      height: 100%;
+      color: $nav-link-color; 
+      font-family: $secondary-font;
+      font-weight: 300;
+      
+      &:hover {
+        color: $nav-link-hover-color;
+        transition: color 0.5s ease;
+      }
+
+      @include media-breakpoint-up(sm) {
+        padding: 0 $indent_xs;
+        white-space: pre;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 $indent_sm/2;
+        white-space: pre;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      height: 60px;
+      display: flex;
+      flex-wrap:wrap;
+      overflow: hidden;
+      justify-content: center;     
+      overflow: hidden;
+      align-items: center;
+      transition: all 0.25s ease-in-out 0.15s;
+    }
+
+    @include media-breakpoint-up(xl) {
+      text-transform: capitalize;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: flex-end;
+
+  }
+}
+
+//--------------------------------------------------------menu button on small displays 
+
+.menu-button { 
+  display:inline-block;
+  width: 49%;
+  color: $white;
+  vertical-align: bottom;
+  text-align: right;
+
+  a {
+    height: 100%;
+  }
+
+  & .span-menu {
+    font-size: $font-size-nav-main *1.2;
+    padding-right: $indent_sm / 3;
+  }
+
+  & .fa {
+    font-size: $indent_sm;
+    color: $white;
+  }
+
+  @include media-breakpoint-up(sm) {
     display:none;
   }
 }
+
+//---------------------end
+
+//--------------------------------------------------------search form
+    
+.search {
+  position: absolute;
+  background-color: rgb(245,245,245);
+  bottom: 22%;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  transform: translateY(200%);
+  transition: all 0.25s ease-in-out 0.15s;
+
+  &.search-in {
+    transform: translateY(0);
+  }
+  
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 17px;
+    border: 0;
+    background-color: white;
+    order: 2;
+    margin-top: 5px;
+
+    @include media-breakpoint-up(sm) {
+        height: 50px;
+      }
+  }
+
+   @include media-breakpoint-up(md) {
+      bottom: -20%;
+      height: 60px;
+   }
+
+   // @include media-breakpoint-up(lg) {
+   //    bottom: -17%;
+   //  }
+
+   @include media-breakpoint-up(xl) {
+      bottom: 0;
+    }
+}
+
+ 
+#closeSearch,
+#startSearch {
+  width: 60px;
+  background: transparent;
+  border: 0;
+}
+
+#startSearch {
+  order: 1;
+}
+  
+#closeSearch  {
+  order: 3;
+}
+
+//---------------------end

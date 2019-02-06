@@ -1,0 +1,350 @@
+//---------WRAPPER CONTAINER tags header body footer  INPUTS/form-elevents
+
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 #{$grid-gutter-width / 2};
+	margin: 0 auto;   
+}
+
+body {
+	font-size: $font-base-size;
+	//min-width: 320px;
+	line-height: $line-base-height;
+	font-family: $primary-font;
+	color: $base-text-color;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: $red;
+		}
+		&:required:valid {
+			border-color: $green;
+		}
+	}
+}
+
+// --------------------------------------HOLDERS and DECORATION, filters
+.common-section {
+
+	padding: $indent_sm/2 0;
+
+	@include media-breakpoint-up(sm) {
+		padding: $indent_sm 0;
+	}
+	
+	@include media-breakpoint-up(lg) {
+		padding: $indent_lg 0;
+	}
+}
+
+.video-holder {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+}
+
+.icon-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-up(sm) {
+		margin-bottom: $indent_sm;   			
+	}
+}
+
+.title-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-up(sm) {
+		margin-bottom: $indent_sm / 1.5;   			
+	}
+}
+
+.text-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-up(sm) {
+		margin-bottom: $indent_sm;   			
+	}
+
+	
+}
+
+
+.fill {                 //for images in box
+	width: 370px;
+	height: 240px;
+	object-fit: fill; //  The replaced content is sized to fill the element's content box
+}
+
+.decoration {
+	position: relative;
+	//padding-bottom: 30px;
+
+
+	&:after {
+		content: "";
+		border-bottom:  3px solid $decoration-line-color;
+		position: absolute;
+		width: $indent_md * 1.3;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 0;
+	}
+}
+
+.darken-filter {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+//-------------------------TAG and another STYLES
+
+h1, h2, h3, h4, h5, h6 {
+	color: $base-header-color;
+}
+
+h2 {
+	font-size: $font-size-h2 / 1.5;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h2;
+	}
+}
+
+h3 {
+	font-size: $font-size-h3 / 1.5;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h3;
+	}
+}
+
+h4 {
+	font-size: $font-size-h4 / 1.5;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h4;
+	}
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+a {
+	color: $base-text-color;
+}
+
+.icon-holder span {
+	color: $dark-gray;
+}
+
+::selection {          //Псевдоэлемент ::selection применяет стиль к выделенному пользователем тексту
+	background-color: $base-text-color;
+	color: $bg-color;
+}
+
+:focus {                        // убираем при фокусе дефолтные обводки для кнопок, input и т.п.
+    outline-style: none;
+    outline-width: 0px;
+    outline-color: none;
+}
+
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.bg-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: $bg_img_color;	
+}
+
+.box-shadow {
+	-webkit-box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29); 
+	box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29);
+}
+
+.block-inverse {
+	color: $white;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	font-size: $font-size-button;
+	margin-bottom: $indent_xs/2;
+	text-align: center;
+	
+	@include media-breakpoint-up(lg) {
+		width: $button-width-lg;
+		max-height: $indent_md;
+	}
+}
+
+.btn-main {
+	color: $button-a-color;
+	background-color: $base-button-color;
+	box-shadow: 2px 6px $button-hover-color;
+	padding: $indent_xs $indent_sm/2;
+
+	&:hover {
+		background-color: $button-hover-color;
+	}
+
+	&:active {
+	  background-color: $button-hover-color;
+	  box-shadow: 2px 4px darken($button-hover-color, 15);
+	  transform: translateY(4px);
+	}
+}
+
+.btn-secondary {
+	color: $base-text-color;
+	background-color: transparent;
+	border: 1px solid $base-text-color;
+	padding: $indent_xs $indent_xs*2;
+
+	&:hover {
+		background-color: $base-button-color;
+		color: $nav-link-color;
+	}
+}
+
+
+
+.border-radius {
+	border-radius: 4px;
+}
+
+.bordered {
+	border: 2px solid $base-button-color;
+}
+
+.small-font-text {
+	font-size: $font-small-size;
+}
+
+.middle-font-text {
+	font-size: $font-middle-size;
+}
+
+.large-font-text {
+	font-size: $font-large-size;
+}
+
+.extra-large-font-text {
+	font-size: $font-extra-large-size;
+}
+
+.lead {
+	font-size: $font-middle-size;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-middle-size*2;
+	}
+}
+
+.slide-header {
+	font-size: $font-size-slide-header;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-slide-header*2;
+	}
+}
+
+//-------------------------------flex
+
+.flex {
+	display: flex;
+}
+
+.align-items-center {
+	//display: flex;
+	align-items: center;
+}
+
+.align-items-flexend {
+	//display: flex;
+	align-items: flex-end;
+}
+
+.align-self-center {
+	align-self: center;
+}
+
+
+.justify-content-flexend {
+	justify-content: flex-end;
+}
+
+
+
+.justify-content-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+//----------------
+
+
+//----------

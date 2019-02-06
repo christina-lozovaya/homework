@@ -5,32 +5,73 @@ $secondary-font: "Montserrat", sans-serif;
 
 $white: #ffffff;
 $ivory: #fbfaf8;  //цвет слоновой кости для bg-color_2
+$light-ivory: #f1eee9;
 $black: #000;
-$red: #000;
-$yellow: #000;
-$green: #000;
+
+// $yellow: #000;
+// $green: #000;
 $blue: #00bff3;
 $gray: #8c8c8c;
+$light-gray: #d1d1d1;
 $dark-gray: #555555;
+$brown: #362f2d;
 $olive-brown:  #998675;
 $olive-yellow:  #c7b299;
 
-//------------
+//------------COLORS
 
-$bg-color: $white;
+//----main / default colors
+
 $base-text-color: $gray;
 $base-header-color: $dark-gray;
-$header-hover-color: $olive-yellow;
-$bg_img_color: $dark-gray;   //он же цвет для наложения на bg-img с регулировкой прозрачности
+$nav-link-color: $white;
 $base-button-color: $olive-brown;
-$button-hover-color: darker($base-button-color, 5); //где 5 - количество тонов затемнения(darker) или осветления (lighter) от 1 до 17
+$button-a-color: $white;
+$decoration-line-color: $light-ivory;
+$list-style-color: $olive-yellow;
+$card-header-color: $olive-yellow;
+$card-text-color: $light-gray;
+$base-icon-color: $dark-gray;
+
+//----bg colors
+
+$bg-color: $white;
+$bg-ivory-color: $ivory;
+$bg_img_color: $dark-gray;   //он же цвет для наложения на bg-img с регулировкой прозрачности
+$bg-card-color: $ivory;
+
+//----hover  colors
+
+$nav-link-hover-color:  $olive-yellow;
+$header-hover-color: $olive-yellow;
+$button-hover-color: darken($base-button-color, 12); //где 5 - количество тонов затемнения(darken) или осветления (lighter) от 1 до 17
+$decoration-line-hover: $olive-yellow;
+$card-header-hover-color: $white;
+$card-text-hover-color: $olive-yellow;
+$bg-card-hover-color: $brown;
 
 
+
+
+
+$font-base-size: 16px;
+$font-small-size: 14px;
+$font-middle-size: 18px;
+$font-large-size: 28px;
+$font-extra-large-size: 48px;
 $font-size-button: 16px;
 $font-size-nav-main: 14px;
+$font-size-slide-header: 26px;
+
+$button-width-lg: 170px;
 
 
+$font-size-h2: 30px;
+$font-size-h3: 22px;
+$font-size-h4: 20px;
 
+
+$line-base-height: 1.7;
 
 
 
@@ -44,9 +85,12 @@ $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
 
 //INDENTS
 
+$indent_xs: 10px;
+
 $indent_sm: 30px;
 $indent_md: 50px;
 $indent_lg: 80px;
+
 
 //------------------------------------
 
