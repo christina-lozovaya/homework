@@ -1,0 +1,42 @@
+.footer-holder {
+	background-color: $light-black;
+	padding: $indent_md 0;
+	
+
+	.footer-list {
+		
+		//margin: 0 -$indent_xs;
+		font-size: 0;             // убираем ненужный нам пробел между li (inline-block), задав ul font-size=0 и ниже вернув font-size потомкам (li) 
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 $indent_xs;
+			border-right: 1px solid;
+			font-size: $font-small-size;
+			color: $footer-text-color;
+
+			a {
+				display: inline-block;
+				width: auto;
+
+				&:hover,
+				&>*:hover {
+					color: $default-link-hover-color;
+				}
+			}
+
+
+		} 
+
+
+	}
+
+	.footer-left {
+		text-align: left;
+	}
+
+	.footer-right {
+		text-align: right;
+	}
+}

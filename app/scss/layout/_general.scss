@@ -19,6 +19,7 @@ body {
 	line-height: $line-base-height;
 	font-family: $primary-font;
 	color: $base-text-color;
+	overflow-x: hidden;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -31,7 +32,7 @@ body {
 	}
 }
 
-// --------------------------------------HOLDERS and DECORATION, filters
+// --------------------------------------holders, decoration, filters
 .common-section {
 
 	padding: $indent_sm/2 0;
@@ -42,6 +43,67 @@ body {
 	
 	@include media-breakpoint-up(lg) {
 		padding: $indent_lg 0;
+	}
+}
+
+.darken-filter {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.decoration {
+	position: relative;
+	
+	&:after {
+		content: "";
+		border-bottom:  3px solid $decoration-line-color;
+		position: absolute;
+		width: $indent_md * 1.3;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 0;
+	}
+}
+
+.fill {                 //for images in box
+	width: 100%;
+	height: 100%;
+	object-fit: fill; //  The replaced content is sized to fill the element's content box
+}
+
+.icon-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	span {
+		color: $dark-gray;
+	}
+
+	@include media-breakpoint-up(sm) {
+		margin-bottom: $indent_sm;   			
+	}
+}
+
+.text-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-up(sm) {
+		margin-bottom: $indent_sm;   			
+	}
+}
+
+.title-holder {
+
+	margin-bottom: $indent_sm / 2;
+
+	@include media-breakpoint-up(sm) {
+		margin-bottom: $indent_sm / 1.5;   			
 	}
 }
 
@@ -63,70 +125,19 @@ body {
 	}
 }
 
-.icon-holder {
+//-------------------------tags and another styles
 
-	margin-bottom: $indent_sm / 2;
-
-	@include media-breakpoint-up(sm) {
-		margin-bottom: $indent_sm;   			
-	}
+a {
+	color: inherit;
+	display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.title-holder {
-
-	margin-bottom: $indent_sm / 2;
-
-	@include media-breakpoint-up(sm) {
-		margin-bottom: $indent_sm / 1.5;   			
-	}
+b, strong {
+	font-weight: bold;
 }
 
-.text-holder {
-
-	margin-bottom: $indent_sm / 2;
-
-	@include media-breakpoint-up(sm) {
-		margin-bottom: $indent_sm;   			
-	}
-
-	
-}
-
-
-.fill {                 //for images in box
-	width: 370px;
-	height: 240px;
-	object-fit: fill; //  The replaced content is sized to fill the element's content box
-}
-
-.decoration {
-	position: relative;
-	//padding-bottom: 30px;
-
-
-	&:after {
-		content: "";
-		border-bottom:  3px solid $decoration-line-color;
-		position: absolute;
-		width: $indent_md * 1.3;
-		left: 50%;
-		transform: translateX(-50%);
-		top: 0;
-	}
-}
-
-.darken-filter {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: 2;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-
-//-------------------------TAG and another STYLES
 
 h1, h2, h3, h4, h5, h6 {
 	color: $base-header-color;
@@ -156,16 +167,8 @@ h4 {
 	}
 }
 
-b, strong {
-	font-weight: bold;
-}
-
-a {
-	color: $base-text-color;
-}
-
-.icon-holder span {
-	color: $dark-gray;
+ul {
+	list-style: none;
 }
 
 ::selection {          //Псевдоэлемент ::selection применяет стиль к выделенному пользователем тексту
@@ -179,41 +182,32 @@ a {
     outline-color: none;
 }
 
-
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	&.img-width {
-		width: 100%;
-	}
-}
-
-.text-center {
-	text-align: center;
-}
-.text-left {
-	text-align: left;
-}
-
-.uppercase {
-	text-transform: uppercase;
+.aside-data-color {
+	color: $aside-data-color;
 }
 
 .bg-img {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-color: $bg_img_color;	
+	background-color: $bg_img_color;
+}
+
+.block-inverse {
+	color: $white;
+}
+
+.border-radius {
+	border-radius: 4px;
+}
+
+.bordered {
+	border: 2px solid $base-button-color;
 }
 
 .box-shadow {
 	-webkit-box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29); 
 	box-shadow: -8px -7px 33px 11px rgba(0,0,0,0.29);
-}
-
-.block-inverse {
-	color: $white;
 }
 
 .btn {
@@ -237,6 +231,7 @@ a {
 
 	&:hover {
 		background-color: $button-hover-color;
+		transition: background-color 0.5s ease;
 	}
 
 	&:active {
@@ -255,33 +250,40 @@ a {
 	&:hover {
 		background-color: $base-button-color;
 		color: $nav-link-color;
+		transition: background-color 0.5s ease;
 	}
 }
 
-
-
-.border-radius {
-	border-radius: 4px;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.bordered {
-	border: 2px solid $base-button-color;
-}
-
-.small-font-text {
-	font-size: $font-small-size;
-}
-
-.middle-font-text {
-	font-size: $font-middle-size;
-}
-
-.large-font-text {
-	font-size: $font-large-size;
+.data-font-size {
+	font-size: $font-data-size;
 }
 
 .extra-large-font-text {
 	font-size: $font-extra-large-size;
+}
+
+.hr-color {
+	border-color: $aside-data-color;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.large-font-text {
+	font-size: $font-large-size;
 }
 
 .lead {
@@ -292,6 +294,10 @@ a {
 	}
 }
 
+.middle-font-text {
+	font-size: $font-middle-size;
+}
+
 .slide-header {
 	font-size: $font-size-slide-header;
 
@@ -300,19 +306,46 @@ a {
 	}
 }
 
-//-------------------------------flex
-
-.flex {
-	display: flex;
+.small-font-text {
+	font-size: $font-small-size;
 }
 
+.text-color-white>* {
+	color: $white;
+}
+
+.text-color-blue {
+	color: $blue;
+}
+
+.text-color-grey {
+	color: $medium-gray;
+}
+
+.text-color-olive_yellow {
+	color: $olive-yellow;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+
+.uppercase {
+	text-transform: uppercase; 
+}
+
+
+
+//-------------------------------flex
+
 .align-items-center {
-	//display: flex;
 	align-items: center;
 }
 
 .align-items-flexend {
-	//display: flex;
 	align-items: flex-end;
 }
 
@@ -320,28 +353,17 @@ a {
 	align-self: center;
 }
 
+.flex {
+	display: flex;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
 
 .justify-content-flexend {
 	justify-content: flex-end;
 }
-
-
-
-.justify-content-between {
-	display: flex;
-	justify-content: space-between;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-
 
 
 //----------------

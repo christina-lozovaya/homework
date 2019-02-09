@@ -6,6 +6,7 @@ $secondary-font: "Montserrat", sans-serif;
 $white: #ffffff;
 $ivory: #fbfaf8;  //цвет слоновой кости для bg-color_2
 $light-ivory: #f1eee9;
+$light-black: #111111;
 $black: #000;
 
 // $yellow: #000;
@@ -13,7 +14,10 @@ $black: #000;
 $blue: #00bff3;
 $gray: #8c8c8c;
 $light-gray: #d1d1d1;
+$middle-gray: #363636;
+$medium-gray: #959595;
 $dark-gray: #555555;
+$darker-gray: #191919;
 $brown: #362f2d;
 $olive-brown:  #998675;
 $olive-yellow:  #c7b299;
@@ -32,6 +36,10 @@ $list-style-color: $olive-yellow;
 $card-header-color: $olive-yellow;
 $card-text-color: $light-gray;
 $base-icon-color: $dark-gray;
+$aside-data-color: $middle-gray;
+$aside-text-color: $dark-gray;
+$footer-text-color: $dark-gray; 
+$post-border-item: $gray;
 
 //----bg colors
 
@@ -39,10 +47,15 @@ $bg-color: $white;
 $bg-ivory-color: $ivory;
 $bg_img_color: $dark-gray;   //он же цвет для наложения на bg-img с регулировкой прозрачности
 $bg-card-color: $ivory;
+$bg-aside-color: $darker-gray;
+$bg-footer-color: $light-black;
+$bg-data-day-holder: $middle-gray;
+$bg-data-month-holder: darken($middle-gray, 12);
 
 //----hover  colors
 
 $nav-link-hover-color:  $olive-yellow;
+$default-link-hover-color:  $olive-yellow;
 $header-hover-color: $olive-yellow;
 $button-hover-color: darken($base-button-color, 12); //где 5 - количество тонов затемнения(darken) или осветления (lighter) от 1 до 17
 $decoration-line-hover: $olive-yellow;
@@ -62,6 +75,7 @@ $font-extra-large-size: 48px;
 $font-size-button: 16px;
 $font-size-nav-main: 14px;
 $font-size-slide-header: 26px;
+$font-data-size: 12px;
 
 $button-width-lg: 170px;
 
@@ -69,6 +83,9 @@ $button-width-lg: 170px;
 $font-size-h2: 30px;
 $font-size-h3: 22px;
 $font-size-h4: 20px;
+
+$font-size-data-day: 24px;
+$font-size-data-month: $font-data-size;
 
 
 $line-base-height: 1.7;

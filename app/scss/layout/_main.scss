@@ -33,14 +33,18 @@
 span.fa-angle-left,
 span.fa-angle-right {
 
-  @include media-breakpoint-up(sm) {
+  visibility: hidden;
+
+  @include media-breakpoint-up(xl) {
     visibility: visible;
     font-size: $indent_lg;
     padding: $indent_xs;
     cursor: pointer;
     position: absolute;
+    z-index: 4;
     top: 50%;
     transform: translateY(-50%);
+    color: white;
 
     &:hover {
       color: $nav-link-hover-color;
@@ -51,8 +55,6 @@ span.fa-angle-right {
 
 span.fa-angle-left {
 
-  visibility: hidden;
-
   @include media-breakpoint-up(xl) {
     left: -50%;
     transform: translateX(50%);
@@ -61,8 +63,6 @@ span.fa-angle-left {
 
 span.fa-angle-right {
   
-  visibility: hidden;
-
   @include media-breakpoint-up(xl) { 
     right: -50%;
     transform: translateX(-50%);
@@ -226,7 +226,7 @@ span.fa-angle-right {
     @include media-breakpoint-up(sm) {
       width: 600px; 
       height: 375px;
-      top: 0;
+      top: 13px;
       left: 0;
 
         & > img {
@@ -316,8 +316,8 @@ span.fa-angle-right {
   &:hover {
 
     background-color: $bg-card-hover-color;
-    transition: background-color 0.9s ease;
-
+    transition: background-color 0.7s ease;
+    cursor: pointer;
 
     .box-links {
       visibility: visible;
@@ -329,6 +329,7 @@ span.fa-angle-right {
 
     .box-content:before {
       border-bottom: $indent_sm/2 solid $bg-card-hover-color;
+      transition: border-bottom 0.7s ease;
     }
 
     p {
@@ -339,6 +340,8 @@ span.fa-angle-right {
 
 .image-card-holder {
   position: relative;
+  width: 100%;
+  height: 240px;
 }
 
 .box-links {
@@ -352,6 +355,8 @@ span.fa-angle-right {
     a {
       padding: $indent_xs;
       color: $card-header-color;
+      display: inline-block;
+      width: auto;
 
       &:hover {
         color: $card-header-hover-color;
@@ -549,4 +554,196 @@ span.fa-angle-right {
   @include media-breakpoint-up(sm) {
     padding-bottom: 0;
   }
+
+  @include media-breakpoint-up(xl) {
+    min-height: 250px;
+  }
 }
+
+//------------------------------- partners  block
+
+.partners-block {
+
+  background-image: url(../../img/bg_our_partners.png);
+  position: relative;
+ 
+  a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .partners-holder {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 500px;
+
+  }
+
+
+}
+
+//----------------------------------------------posts block
+
+.image-post-holder {
+  position: relative;
+  width: 100%;
+  height: 240px;
+
+  .darken-filter {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.post-content {
+  padding: $indent_sm;
+  text-align: left;
+  border: 1px solid rgba($post-border-item, .15);
+}
+
+.data-box {
+  width: $indent_md;
+  color: $white;
+  position: absolute;
+  top: $indent_xs*2;
+  left: $indent_xs*2;
+  border-radius: 10px;
+}
+
+.data-day-holder {
+
+  //height: $indent_sm + $indent_xs/2;
+  background-color: $bg-data-day-holder;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 0 $indent_xs;
+
+  span {
+    font-size: $font-size-data-day;
+  }
+}
+
+.data-month-holder {
+
+  //height: $indent_md/2;
+  background-color: $bg-data-month-holder;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  span {
+    font-size: $font-size-data-month;
+  }
+}
+
+span.fa-chevron-circle-left,
+span.fa-chevron-circle-right {
+
+  visibility: hidden;
+
+  @include media-breakpoint-up(xl) {
+    visibility: visible;
+    background-color: transparent;
+    
+    //color: $post-border-item;
+    font-size: $indent_md;
+    padding: $indent_xs;
+    cursor: pointer;
+    position: relative;
+    //z-index: 4;
+   // top: 50%;
+    //transform: translateY(-50%);
+    
+   color: red;
+
+
+    &:hover {
+      color: blue;
+      transition: color .3s;
+    } 
+  }
+}  
+
+// span.fa-angle-left.carousel-post-prev {
+
+//   @include media-breakpoint-up(xl) {
+//     left: -50%;
+//     transform: translateX(50%);
+//   }
+// }
+
+// span.fa-angle-right.carousel-post-next {
+  
+//   @include media-breakpoint-up(xl) { 
+//     right: -50%;
+//     transform: translateX(-50%);
+//   }
+// }
+
+span.fa-chevron-circle-left {
+  position: absolute;
+  bottom: -80px;
+  right: 50%;
+
+
+}
+
+span.fa-chevron-circle-right {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+}
+
+
+
+//---------------------------------- additional-info-block
+
+.additional-info-block {
+  background-color: $bg-aside-color;
+  color: $aside-text-color;
+
+  .aside-item {
+    padding-bottom: $indent_xs;
+
+    &:hover {
+      cursor: pointer;
+      
+
+      p.data-font-size {
+        color: $white;
+        transition: color 0.5s ease;
+      }
+
+      p.small-font-text {
+        color: $default-link-hover-color;
+        transition: color 0.5s ease;
+      }
+    }
+  }
+
+  .logo-holder {
+    padding-bottom: $indent_sm;
+  }
+
+  .title-holder>* {
+    color: $white;
+  }
+
+  .dribbble-widget {
+    flex-wrap: wrap;
+    
+    .widget-holder {
+      height: 100px;
+      width: 132px;
+      padding-bottom: $indent_xs;
+    }
+  }
+}
+
