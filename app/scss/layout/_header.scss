@@ -48,7 +48,7 @@ header {
     height: 100%;
   }
 
-  img {
+  .logo-img {
     width: 190px;
     height: $indent_md;
   }
@@ -102,9 +102,10 @@ header {
       font-family: $secondary-font;
       font-weight: 300;
       
-      &:hover {
+      &:hover,
+      & >*:hover {
         color: $nav-link-hover-color;
-        transition: color 0.5s ease;
+        transition: color 0.35s ease;
       }
 
       @include media-breakpoint-up(sm) {
@@ -160,7 +161,7 @@ header {
     padding-right: $indent_sm / 3;
   }
 
-  & .fa {
+  & .icon-menu {
     font-size: $indent_sm;
     color: $white;
   }
@@ -224,6 +225,11 @@ header {
   width: 60px;
   background: transparent;
   border: 0;
+
+  [class^="icon-"], [class*=" icon-"] {
+    color: $medium-gray;
+  }
+
 }
 
 #startSearch {

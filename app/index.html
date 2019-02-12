@@ -3,17 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
-	<!-- <base href="/"> -->
 	<title>OptimizedHTML 4</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-	<!-- Template Basic Images Start -->
 	<link rel="icon" href="img/favicon/favicon.ico"> <!--для иконки во вкладке страницы браузера-->
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!--slick slider-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300i,400|Raleway:400,500,600,700,800" rel="stylesheet"> <!--fonts-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> <!--иконки font awesome-->
-
+	
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -27,13 +24,13 @@
 				<div class="group">
 					<div class="logo-holder"> 
 						<a href="#">
-							<img src="img/Waxom(logo).png" alt="Waxom's company" />
+							<img src="img/Waxom(logo).png" alt="Waxom's company" class="logo-img" />
 						</a>
 					</div>
 					<div class="menu-button">
 						<a href="#" class="menu-trigger">
 							<span class="span-menu">MENU</span>
-							<span class="fa fa-bars" aria-hidden="true"></span>
+							<span class="icon-menu" aria-hidden="true"></span>
 						</a>
 					</div>
 					<nav class="main-navbar">
@@ -46,16 +43,16 @@
 							<li><a href="#" target="_blank">Pricing</a></li>
 							<li><a href="#" target="_blank">Shortcodes</a></li>
 							<li><a href="#contact" target="_blank">Contact</a></li>
-							<li><a href="#" id="shopingAction"><span class="fa fa-shopping-bag" aria-hidden="true"></span></a></li>
-							<li><a href="" id="toggleSearch"><span class="fa fa-search" aria-hidden="true"></span></a></li>
+							<li><a href="#" id="shopingAction"><span class="icon-shopping-bag"aria-hidden="true"></span></a></li>
+							<li><a href="" id="toggleSearch"><span class="icon-search" aria-hidden="true"></span></a></li>
 						</ul>
 						<div class="search">
 							<input type="text" placeholder="Search..."> 
 							<button id="startSearch" type="submit">
-							  <span class="fa fa-search"></span>
+							  <span class="icon-search"></span>
 							</button>
 							<button id="closeSearch" type="button">
-							  <span class="fa fa-close"></span>
+							  <span class="icon-close"></span>
 							</button>
 						</div>
 					</nav>					
@@ -118,9 +115,9 @@
 					
 						<div class="col-12 col-md-3">
 							<div class="inform-block">
-								<a href="#">
+								<a href="#" class="inform-block-item">
 									<div class="icon-holder">
-										<span class="icon fa fa-pencil"></span>
+										<span class="icon-pencil"></span>
 									</div>
 									<div class="title-holder">
 										<h3>Web & App Design</h3>
@@ -135,9 +132,9 @@
 
 						<div class="col-12 col-md-3">
 							<div class="inform-block">
-								<a href="#">
+								<a href="#" class="inform-block-item">
 									<div class="icon-holder">
-										<span class="icon fa fa-clipboard"></span>
+										<span class="icon-layers"></span>
 									</div>
 									<div class="title-holder">
 										<h3>Development</h3>
@@ -152,9 +149,9 @@
 				
 						<div class="col-12 col-md-3">
 							<div class="inform-block">
-								<a href="#">
+								<a href="#" class="inform-block-item">
 									<div class="icon-holder">
-										<span class="icon fa fa-cog"></span>
+										<span class="icon-settings"></span>
 									</div>
 									<div class="title-holder">
 										<h3>Customization</h3>
@@ -169,9 +166,9 @@
 				
 						<div class="col-12 col-md-3">
 							<div class="inform-block">
-								<a href="#">
+								<a href="#" class="inform-block-item">
 									<div class="icon-holder">
-										<span class="icon fa fa-folder-open"></span>
+										<span class="icon-folder-open"></span>
 									</div>
 									<div class="title-holder">
 										<h3>Marketing</h3>
@@ -191,11 +188,15 @@
 			<section id="join" class="join-us-block">
 				
 					<div class="container text-center">
-						<div class="title-holder">
-							<h2>Waxom is Realization of your Ideas.</h2>
-						</div>
-						<div class="text-holder">
-							<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+						<div class="row justify-content-center">
+							<div class="col col-12 col-lg-8">
+								<div class="title-holder">
+									<h2>Waxom is Realization of your Ideas.</h2>
+								</div>
+								<div class="text-holder">
+									<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				
@@ -212,9 +213,9 @@
 				<footer class="bg-img" style="background-image: url(img/bg-gradient-footer.png);">
 					
 					<div class="container">
-						<div class="row text-center">
+						<div class="row justify-content-between">
 							<div class="col col-12 col-sm-8 col-lg-9">
-								<p >
+								<p> 
 									<span class="large-font-text">Waxom Multipurpose WordPress Theme</span><br />
 									<span class="middle-font-text">Don't Forget to Rate the Template. Thanks so much!</span>
 								</p>
@@ -232,11 +233,15 @@
 
 			<section id="portfolio" class="portfolio-block common-section">
 				<div class="container text-center">
-					<div class="title-holder">
-						<h2>Our Latest Projects.</h2>
-					</div>
-					<div class="text-holder">
-						<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+					<div class="row justify-content-center">
+						<div class="col col-12 col-lg-8">
+							<div class="title-holder">
+								<h2>Our Latest Projects.</h2>
+							</div>
+							<div class="text-holder">
+								<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							</div>
+						</div>
 					</div>
 					<div  class="row filter text-center">
 						<div class="col col-12">
@@ -260,14 +265,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Claritas Etiam Processus</h4>
-									    <p>Photography, Nature</p>
+							            <h4 class="box-header">Claritas Etiam Processus</h4>
+									    <p  class="box-text">Photography, Nature</p>
 									</div>
 					            </article>
 					        </div>
@@ -279,14 +284,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Quam Nutamus Farum</h4>
-									    <p>Graphic Design, Mock-Up</p>
+							            <h4 class="box-header">Quam Nutamus Farum</h4>
+									    <p class="box-text">Graphic Design, Mock-Up</p>
 									</div>
 					            </article>
 					        </div>
@@ -298,14 +303,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Usus Legentis Videntur</h4>
-									    <p>Photography, Holiday</p>
+							            <h4 class="box-header">Usus Legentis Videntur</h4>
+									    <p class="box-text">Photography, Holiday</p>
 									</div>
 					            </article>
 					        </div>
@@ -317,14 +322,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Claritas Etiam Processus</h4>
-									    <p>Photography, Nature</p>
+							            <h4 class="box-header">Claritas Etiam Processus</h4>
+									    <p class="box-text">Photography, Nature</p>
 									</div>
 					            </article>
 					        </div>
@@ -336,14 +341,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Quam Nutamus Farum</h4>
-									    <p>Graphic Design, Mock-Up</p>
+							            <h4 class="box-header">Quam Nutamus Farum</h4>
+									    <p class="box-text">Graphic Design, Mock-Up</p>
 									</div>
 					            </article>
 					        </div>
@@ -355,14 +360,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+											<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Usus Legentis Videntur</h4>
-									    <p>Photography, Holiday</p>
+							            <h4 class="box-header">Usus Legentis Videntur</h4>
+									    <p class="box-text">Photography, Holiday</p>
 									</div>
 					            </article>
 					        </div>
@@ -377,14 +382,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Claritas Etiam Processus</h4>
-									    <p>Photography, Nature</p>
+							            <h4 class="box-header">Claritas Etiam Processus</h4>
+									    <p class="box-text">Photography, Nature</p>
 									</div>
 					            </article>
 					        </div>
@@ -396,14 +401,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							             <h4>Quam Nutamus Farum</h4>
-									    <p>Graphic Design, Mock-Up</p>
+							             <h4 class="box-header">Quam Nutamus Farum</h4>
+									    <p class="box-text">Graphic Design, Mock-Up</p>
 									</div>
 					            </article>
 					        </div>
@@ -415,14 +420,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Usus Legentis Videntur</h4>
-									    <p>Photography, Holiday</p>
+							            <h4 class="box-header">Usus Legentis Videntur</h4>
+									    <p class="box-text">Photography, Holiday</p>
 									</div>
 					            </article>
 					        </div>
@@ -434,14 +439,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Claritas Etiam Processus</h4>
-									    <p>Photography, Nature</p>
+							            <h4 class="box-header">Claritas Etiam Processus</h4>
+									    <p class="box-text">Photography, Nature</p>
 									</div>
 					            </article>
 					        </div>
@@ -453,14 +458,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
- 										<h4>Quam Nutamus Farum</h4>
-									    <p>Graphic Design, Mock-Up</p>
+ 										<h4 class="box-header">Quam Nutamus Farum</h4>
+									    <p class="box-text">Graphic Design, Mock-Up</p>
 									</div>
 					            </article>
 					        </div>
@@ -472,14 +477,14 @@
 										<div class="box-links">
 											<div class="darken-filter"></div>
 											<div class="link-holder centered">
-												<a href=""><span class="icon fa fa-link" aria-hidden="true"></span></a>
-												<a href=""><span class="icon fa fa-search" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-link" aria-hidden="true"></span></a>
+												<a href="" class="box-link-item"><span class="icon-search" aria-hidden="true"></span></a>
 											</div>
 										</div>
 									</div>
 									<div class="box-content">
-							            <h4>Usus Legentis Videntur</h4>
-									    <p>Photography, Holiday</p> 
+							            <h4 class="box-header">Usus Legentis Videntur</h4>
+									    <p class="box-text">Photography, Holiday</p> 
 									</div>
 					            </article>
 					        </div>
@@ -544,11 +549,12 @@
 							</div>
 							<div class="list-holder">
 								<ul class="circle-list circle">
-									<li> Nam liber tempor cum soluta nobis eleifend option;</li>
-									<li>Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
-									<li>Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
-									<li>Investigationes demonstraverunt lectores</li>
+									<li class="circle-list-item"> Nam liber tempor cum soluta nobis eleifend option;</li>
+									<li class="circle-list-item">Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+									<li class="circle-list-item">Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+									<li class="circle-list-item">Investigationes demonstraverunt lectores</li>
 								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -610,17 +616,21 @@
 
 
 
-			<section id="posts" class="recent-posts-block common-section">
+			<section id="posts" class="recent-posts-block">
 				<div class="container  text-center">
-					<div class="title-holder">
-						<h2>Recent Posts.</h2>
-					</div>
-					<div class="text-holder">
-						<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+					<div class="row justify-content-center">
+						<div class="col col-12 col-lg-8">
+							<div class="title-holder">
+								<h2>Recent Posts.</h2>
+							</div>
+							<div class="text-holder">
+								<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							</div>
+						</div>
 					</div>
 					<div class="carousel-posts-holder ">
 						<div class="responsive row">
-							
+						
 							<article class="post-item col col-12 col-lg-4">
 								<div class="image-post-holder">
 									<div class="darken-filter"></div>
@@ -766,16 +776,23 @@
 								    <p class="small-font-text text-color-olive_yellow"><a href="#">Read More &rtrif;</a></p>
 								</div>
 							</article>
- 
+
+
+
+								<div class="arrows-holder">
+							<span class="icon-circle-left"></span>
+							<span class="icon-circle-right"></span>
+						</div>
 						
 
 
-
-
+						
 
 							
 
   						</div>
+						
+  						
 						
 					</div>
 				</div>
@@ -797,16 +814,16 @@
 				<div class="container partners-holder">
 					<div class="row">
 						<div class="col col-6 col-md-3 align-self-center">
-							<a href="#"><img src="img/partners_1.png" alt="our partner The Barber shop" /></a>
+							<a href="#" class="partner-item"><img src="img/partners_1.png" alt="our partner The Barber shop" /></a>
 						</div>
 						<div class="col col-6 col-md-3 align-self-center">
-							<a href="#"><img src="img/partners_2.png" alt="our partner Delicious products" /></a>
+							<a href="#" class="partner-item"><img src="img/partners_2.png" alt="our partner Delicious products" /></a>
 						</div>
 						<div class="col col-6 col-md-3 align-self-center">
-							<a href="#"><img src="img/partners_3.png" alt="our partner Designers" /></a>
+							<a href="#" class="partner-item"><img src="img/partners_3.png" alt="our partner Designers" /></a>
 						</div>
 						<div class="col col-6 col-md-3 align-self-center">
-							<a href="#"><img src="img/partners_4.png" alt="our partner Cafe Royal Roasters" /></a>
+							<a href="#" class="partner-item"><img src="img/partners_4.png" alt="our partner Cafe Royal Roasters" /></a>
 						</div>
 					</div>
 				</div>
@@ -935,6 +952,8 @@
 							<li>Only on <a href="#"><span class="text-color-grey">Envato Market</span></a></li>
 							
 						</ul>
+
+						
 					</div>
 				</div>
 			</div>

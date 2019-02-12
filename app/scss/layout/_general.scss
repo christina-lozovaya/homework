@@ -361,6 +361,10 @@ ul {
 	justify-content: space-between;
 }
 
+.justify-content-center {
+	justify-content: center;
+}
+
 .justify-content-flexend {
 	justify-content: flex-end;
 }
@@ -370,3 +374,42 @@ ul {
 
 
 //----------
+
+  .circle-list {
+    list-style: none;
+    text-align: left;
+
+    .circle-list-item {
+      position: relative;
+      padding-left: $indent_md;
+      padding-bottom: $indent_xs*2;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: $indent_xs*2;
+        height: $indent_xs*2;
+        background: $list-style-color;
+        border-radius: 50%;
+        left: 0;
+        top: 8%;
+        z-index: 2;
+      }
+
+      &:after {
+        content: '>';
+        position: absolute;
+        right: 0;
+        left: 2%;
+        top: 3%;
+        bottom: 0;
+        z-index: 3;
+        color: white;
+
+        @include media-breakpoint-up(sm) {
+            left: 6px;
+    		top: -1px
+        }
+      }
+    }
+  }

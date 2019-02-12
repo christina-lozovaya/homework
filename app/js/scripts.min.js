@@ -210,9 +210,9 @@ $('.responsive').slick({
   dots: true,
   infinite: false,
   speed: 300,
-  prevArrow:"<span class='fa fa-chevron-circle-left'></span>",
-  nextArrow:"<span class='fa fa-chevron-circle-right'></span>",   
-  slidesToShow: 3,
+  prevArrow:"<span class='icon-circle-left'></span>",
+  nextArrow:"<span class='icon-circle-right'></span>",   
+  slidesToShow: 3, 
   slidesToScroll: 3,
   responsive: [
       {
@@ -233,7 +233,7 @@ $('.responsive').slick({
     // settings: "unslick"
     // instead of a settings object
   ]
-});
+}); 
 
 
 
